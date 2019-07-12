@@ -8,9 +8,11 @@
 
 <body class="page page--form">
   <h1 class="visually-hidden">Кэт энерджи</h1>
-  <header class="page__header header">
+  <header class="header">
     <nav class="header__nav nav">
-      <a class="header__logo logo" href="index.html"></a>
+      <a class="header__logo" href="index.html">
+        <img src="http://placehold.it/191x39" alt="Логотип кампании">
+      </a>
       <ul class="nav__list page__list">
         <li class="nav__item">
           <a class="nav__link" href="index.html">Главная</a>
@@ -21,17 +23,20 @@
         <li class="nav__item">
           <a class="nav__link">Подбор программы</a>
         </li>
+        <button class="header__toggler header__toggler--closer">
+          <span class="visually-hidden">Показать или скрыть меню</span>
+        </button>
       </ul>
     </nav>
   </header>
-  <main class="page__content content-section">
+  <main class="content-section">
     <h2 class="content-section__title">Подбор программы</h2>
     <form class="content-section__form form" method="post" action="https://echo.htmlacademy.ru">
       <p class="form__description">
         Заполните анкету и мы подберем
         программу питания для вашего кота
       </p>
-      <fieldset class="form__group form__group--info-cat">
+      <fieldset class="form__group form__group--fields">
         <legend class="visually-hidden">Информация о Вашем питомце</legend>
         <p class="form__item">
           <label class="form__label" for="cat-name">Имя:*</label>
@@ -48,25 +53,24 @@
       </fieldset>
       <fieldset class="form__group form__group--checks">
         <legend class="visually-hidden">Выриант программы</legend>
-        <p class="form__item-ckecks">
-          <input class=" form__checker visually-hidden" id="select-1" name="select" value="1" type="radio" checked>
+        <p class="form__item-checks">
+          <input class="form__checker visually-hidden" id="select-1" name="select" value="1" type="radio" checked>
           <label class="form__label form__label--radio" for="select-1">Похудение</label>
         </p>
-        <p class="form__item-ckecks">
+        <p class="form__item-checks">
           <input class="form__checker visually-hidden" id="select-2" name="select" value="2" type="radio">
           <label class="form__label form__label--radio" for="select-2">Набор массы</label>
         </p>
-        <p class="form__item-ckecks">
+        <p class="form__item-checks">
           <input class="form__checker visually-hidden" id="select-3" name="select" value="3" type="radio">
           <label class="form__label form__label--radio" for="select-3">Не знаю (Нужен ваш совет)</label>
         </p>
       </fieldset>
       <fieldset class="form__group form__group--contacts">
-        <legend class="form__title">Контактные данные(владельца кота)</legend>
+        <legend class="form__title">Контактные данные (владельца кота)</legend>
         <p class="form__item">
           <label class="form__label" for="email">E-mail:*</label>
-          <input class="form__field form__field--email" id="email" name="email" type="email"
-            placeholder="kuklachev@gmail.com">
+          <input class="form__field form__field--email" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
         </p>
         <p class="form__item">
           <label class="form__label" for="tel">Телефон:*</label>
@@ -77,40 +81,38 @@
         <legend class="form__title">Комментарий</legend>
         <p class="form__item">
           <label class="form__label form__label--comment" for="comment">Комментарий</label>
-          <textarea class="form__field form__field--comment" id="comment" name="comment"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="form__field form__field--comment" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </p>
       </fieldset>
-      <fieldset class="form__group form__group--ckecks">
+      <fieldset class="form__group form__group--checks">
         <legend class="form__title">Дополнительно</legend>
-        <p class="form__item-ckecks">
-          <input class="form__checker visually-hidden" id="addition-1" name="addition" value="1" type="checkbox"
-            checked>
+        <p class="form__item-checks">
+          <input class="form__checker visually-hidden" id="addition-1" name="addition" value="1" type="checkbox" checked>
           <label class="form__label form__label--checkbox" for="addition-1">Сахарозаменитель</label>
         </p>
-        <p class="form__item-ckecks">
+        <p class="form__item-checks">
           <input class="form__checker visually-hidden" id="addition-2" name="addition" value="2" type="checkbox">
           <label class="form__label form__label--checkbox" for="addition-2">Питьевая вода</label>
         </p>
-        <p class="form__item-ckecks">
+        <p class="form__item-checks">
           <input class="form__checker visually-hidden" id="addition-3" name="addition" value=" 3" type="checkbox">
           <label class="form__label form__label--checkbox" for="addition-3">Молоко</label>
         </p>
-        <p class="form__item-ckecks">
+        <p class="form__item-checks">
           <input class="form__checker visually-hidden" id="addition-4" name="addition" value="3" type="checkbox">
           <label class="form__label form__label--checkbox" for="addition-4">Витамины</label>
         </p>
       </fieldset>
-      <button class="form__btn" type="submit">Отправить заявку</button>
+      <button class="form__button" type="submit">Отправить заявку</button>
       <p class="form__description">
         * — Обязательные поля
       </p>
     </form>
   </main>
-  <footer class="page__footer footer">
-    <section class="footer__info info">
+  <footer class="footer">
+    <section class="footer__top">
       <h2 class="visually-hidden">Контакты кампании</h2>
-      <div class="info__contacts contacts">
+      <div class="footer__contacts contacts">
         <p class="contacts__text">
           Приглашаем к сотрудничеству дилеров!
         </p>
@@ -120,14 +122,15 @@
       </div>
       <p class="footer__map map">
         <a class="map__href" href="https://www.google.com/maps" aria-label="Ссылка на сайт Google карты">
-          <img src="img/map.png" width="320" height="400"
-            alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          <img src="img/map.png" width="320" height="400" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         </a>
       </p>
     </section>
     <section class="footer__bottom">
       <h2 class="visually-hidden">Информация о разработчиках и ссылки на социальные сети</h2>
-      <a class="footer__logo" href="index.html"></a>
+      <a class="footer__logo" href="index.html">
+        <img src="http://placehold.it/191x39" alt="Логотип кампании">
+      </a>
       <ul class="footer__social social page__list">
         <li class="social__item">
           <a class="social__link social__link--vk" href="#" aria-label="Кэт Энерджи во Вконтакте"></a>
@@ -136,13 +139,13 @@
           <a class="social__link social__link--inst" href="#" aria-label="Кэт Энерджи в Инстаграмме"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--fb" href="#" aria-label="Кэт Энерджи во Фейсбуке"></a>
+          <a class="social__link social__link--fb" href="#" aria-label="Кэт Энерджи в Фейсбуке"></a>
         </li>
       </ul>
-      <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-        <svg xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1" fill="#666666">
-          <path
-            d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3h-.2L2 12.1v-9L13.5 2 25 3.1v9zM13.4 6.8l11.5 6.7-4.5 2.6-7-4.2v1.4l5.8 3.5-.8.6-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.8 1-1.8 1.2L2 13.6l11.4-6.8zM1.9 15L13.3 22v1l-7.9-4.7v1.5l8 4.7v1.1l-8-4.7v1.4l8 4.8 8.2-4.8V17l3.4-2v10l-11.5 6.9-11.6-7v-9.8z" />
+      <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1">
+          <path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3h-.2L2 12.1v-9L13.5 2 25 3.1v9zM13.4 6.8l11.5 6.7-4.5 2.6-7-4.2v1.4l5.8 3.5-.8.6-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.8 1-1.8 1.2L2 13.6l11.4-6.8zM1.9 15L13.3 22v1l-7.9-4.7v1.5l8 4.7v1.1l-8-4.7v1.4l8 4.8 8.2-4.8V17l3.4-2v10l-11.5 6.9-11.6-7v-9.8z" />
         </svg>
       </a>
     </section>
