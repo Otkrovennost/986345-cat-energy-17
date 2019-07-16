@@ -1,12 +1,162 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
 
-  </body>
+<body class="page">
+  <h1 class="visually-hidden">Кэт энерджи</h1>
+  <header class="header">
+    <nav class="header__nav nav">
+      <a class="header__logo">
+        <img src="http://placehold.it/191x39" alt="Логотип кампании">
+      </a>
+      <ul class="nav__list page__list">
+        <li class="nav__item">
+          <a class="nav__link">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+      <button class="header__toggler header__toggler--closer">
+        <span class="visually-hidden">Показать или скрыть меню</span>
+      </button>
+    </nav>
+    <section class="header__program program">
+      <h2 class="visualli-hidden">Подбор программы</h2>
+      <b class="program__title">Функциональное питание для котов</b>
+      <p class="program__text">Занялся собой? Займись котом!</p>
+      <img class="program__img" src="http://placehold.it/280x270" alt="Кот для котов Cat Energy Pro">
+      <a class="program__link" href="form.html">Подобрать программу</a>
+    </section>
+  </header>
+  <main class="content">
+    <section class="content__offers offers">
+      <h2 class="visualli-hidden">Предложения программы</h2>
+      <ul class="offers__list page__list">
+        <li>
+          <b class="offers__title">Похудение</b>
+          <p class="offers__text">
+            Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+          </p>
+          <a class="offers__link" href="#nowhere">Каталог Slim</a>
+        </li>
+        <li>
+          <b class="offers__title">Набор массы</b>
+          <p class="offers__text">
+            Заработать авторитет среди дворовых котов и даже собак?
+            Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+          </p>
+          <a class="offers__link" href="#nowhere">Каталог pro</a>
+        </li>
+      </ul>
+    </section>
+    <section class="content__advantages advantages">
+      <h2 class="visually-hidden">Как это работает</h2>
+      <ul class="advantages__list page__list">
+        <li class="advantages__item">
+          <p class="advantages__text">
+            Функциональное питание содержит только полезные питательные вещества.
+          </p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__text">
+            Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+          </p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__text">
+            Замените один-два приема обычной еды на наше функциональное питание.
+          </p>
+        </li>
+        <li class="advantages__item">
+          <p class="advantages__text">
+            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          </p>
+        </li>
+      </ul>
+    </section>
+    <article class="content__story story">
+      <h2 class="story__title">Живой пример</h2>
+      <p class="story__text">
+        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+      </p>
+      <dl class="story__digits digits">
+        <dt class="digits__heading">Снижение веса</dt>
+        <dd class="digits__value">5 кг</dd>
+        <dt class="digits__heading">Затрачено времени</dt>
+        <dd class="digits__value">60 дней</dd>
+        <dt class="digits__costs-heading">Затраты на питание:</dt>
+        <dd class="digits__costs-value">15 000 руб</dd>
+      </dl>
+      <h2 class="visually-hidden">Фото до и после программы</h2>
+      <input class="visually-hidden" id="slide-1" name="slide" type="radio" checked>
+      <input class="visually-hidden" id="slide-2" name="slide" type="radio">
+      <ul class="story__slider slider page__list">
+        <li class=" slider__item">
+          <img class="slider__img" src="img/cat-before.png" width="311" height="232" alt="Фото кота до программы">
+        </li>
+        <li class="slider__item">
+          <img class="slider__img" src="img/cat-after.png" width="251" height="240" alt="Фото кота после программы">
+        </li>
+      </ul>
+      <ul class="story__slider-checker checker">
+        <li>
+          <label class="checker__prew" for="slide-1">Было</label>
+        </li>
+        <li>
+          <label class="checker__next" for="slide-2">Стало</label>
+        </li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer">
+    <section class="footer__top">
+      <h2 class="visually-hidden">Контакты кампании</h2>
+      <div class="footer__contacts contacts">
+        <p class="contacts__text">
+          Приглашаем к сотрудничеству дилеров!
+        </p>
+        <p class="contacts__text contacts__text--adress">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </p>
+      </div>
+      <p class="footer__map map">
+        <a class="map__href" href="https://www.google.com/maps" aria-label="Ссылка на сайт Google карты">
+          <img src="img/map.png" width="320" height="400" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        </a>
+      </p>
+    </section>
+    <section class="footer__bottom">
+      <h2 class="visually-hidden">Информация о разработчиках и ссылки на социальные сети</h2>
+      <a class="footer__logo">
+        <img src="http://placehold.it/191x39" alt="Логотип кампании">
+      </a>
+      <ul class="footer__social social page__list">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" aria-label="Кэт Энерджи во Вконтакте"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#" aria-label="Кэт Энерджи в Инстаграмме"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#" aria-label="Кэт Энерджи в Фейсбуке"></a>
+        </li>
+      </ul>
+      <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на сайт разработчика">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1">
+          <path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3h-.2L2 12.1v-9L13.5 2 25 3.1v9zM13.4 6.8l11.5 6.7-4.5 2.6-7-4.2v1.4l5.8 3.5-.8.6-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.8 1-1.8 1.2L2 13.6l11.4-6.8zM1.9 15L13.3 22v1l-7.9-4.7v1.5l8 4.7v1.1l-8-4.7v1.4l8 4.8 8.2-4.8V17l3.4-2v10l-11.5 6.9-11.6-7v-9.8z" />
+        </svg>
+      </a>
+    </section>
+  </footer>
+</body>
+
 </html>
