@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -29,25 +30,27 @@
       </button>
     </nav>
     <section class="header__program program">
-      <h2 class="visualli-hidden">Подбор программы</h2>
-      <b class="program__title">Функциональное питание для котов</b>
-      <p class="program__text">Занялся собой? Займись котом!</p>
-      <img class="program__img" src="http://placehold.it/280x270" alt="Кот для котов Cat Energy Pro">
-      <a class="program__link" href="form.html">Подобрать программу</a>
+      <h2 class="visually-hidden">Подбор программы</h2>
+      <div class="program__wrapper">
+        <b class="program__title">Функциональное питание для котов</b>
+        <p class="program__text">Занялся собой? Займись котом!</p>
+      </div>
+      <img class="program__img" src="../img/index-can-mobile@1x.png" width="280" height="270" alt="Кот для котов Cat Energy Pro">
+      <a class="program__link button" href="form.html">Подобрать программу</a>
     </section>
   </header>
   <main class="content">
     <section class="content__offers offers">
-      <h2 class="visualli-hidden">Предложения программы</h2>
+      <h2 class="visually-hidden">Предложения программы</h2>
       <ul class="offers__list page__list">
-        <li>
+        <li class="offers__item">
           <b class="offers__title">Похудение</b>
           <p class="offers__text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
           <a class="offers__link" href="#nowhere">Каталог Slim</a>
         </li>
-        <li>
+        <li class="offers__item">
           <b class="offers__title">Набор массы</b>
           <p class="offers__text">
             Заработать авторитет среди дворовых котов и даже собак?
@@ -58,7 +61,7 @@
       </ul>
     </section>
     <section class="content__advantages advantages">
-      <h2 class="visually-hidden">Как это работает</h2>
+      <h2 class="advantages__title">Как это работает</h2>
       <ul class="advantages__list page__list">
         <li class="advantages__item">
           <p class="advantages__text">
@@ -93,7 +96,7 @@
         <dt class="digits__heading">Затрачено времени</dt>
         <dd class="digits__value">60 дней</dd>
         <dt class="digits__costs-heading">Затраты на питание:</dt>
-        <dd class="digits__costs-value">15 000 руб</dd>
+        <dd class="digits__costs-value">15 000 руб.</dd>
       </dl>
       <h2 class="visually-hidden">Фото до и после программы</h2>
       <input class="visually-hidden" id="slide-1" name="slide" type="radio" checked>
@@ -106,7 +109,7 @@
           <img class="slider__img" src="img/cat-after.png" width="251" height="240" alt="Фото кота после программы">
         </li>
       </ul>
-      <ul class="story__slider-checker checker">
+      <ul class="story__slider-checker checker page__list">
         <li>
           <label class="checker__prew" for="slide-1">Было</label>
         </li>
@@ -120,7 +123,7 @@
     <section class="footer__top">
       <h2 class="visually-hidden">Контакты кампании</h2>
       <div class="footer__contacts contacts">
-        <p class="contacts__text">
+        <p class="contacts__text contacts__text--partnership">
           Приглашаем к сотрудничеству дилеров!
         </p>
         <p class="contacts__text contacts__text--adress">
