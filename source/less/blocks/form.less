@@ -1,8 +1,11 @@
 .form {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
   font-family: @font-design;
+}
+
+.form__description {
+  line-height: 18px;
+  color: #111111;
   text-transform: uppercase;
 }
 
@@ -10,35 +13,32 @@
   border: none;
 }
 
-.form__description {
-  font-size: 14px;
+.form__item {
+  font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
 }
 
-.form__description--required {
-  font-size: 14px;
-  line-height: 16px;
+.form__description-required {
   font-family: @font-base;
-  color: #444444;
   text-transform: none;
 }
 
 .form__title {
-  font-size: 24px;
   line-height: 24px;
+  color: #111111;
   text-transform: none;
 }
 
 .form__label {
   color: #222222;
+  text-transform: uppercase;
 }
 
 .form__field {
-  font-size: 16px;
-  line-height: 18px;
-  font-family: @font-design;
+  font: inherit;
   color: #444444;
-  text-transform: uppercase;
+  text-transform: inherit;
 }
 
 .form__field::placeholder {
