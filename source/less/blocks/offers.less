@@ -1,3 +1,8 @@
+.offers {
+  width: 280px;
+  margin: 20px auto;
+}
+
 .offers__item {
   background-color: #f2f2f2;
 }
@@ -16,4 +21,28 @@
   font-family: @font-design;
   color: #111111;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .offers {
+    width: 708px;
+    margin: 30px auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .offers {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .offers__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .offers__item {
+    width: 570px;
+  }
 }
