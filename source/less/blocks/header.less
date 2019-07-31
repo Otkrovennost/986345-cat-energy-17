@@ -1,16 +1,29 @@
-.header__nav {
-  width: 320px;
-  margin: 0 auto;
+.header {
+  @media @desktop {
+    min-height: 696px;
+    margin-bottom: 75px;
+    background-color: linear-gradient(to right, #ffffff 50%, #68b738);
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  &--inner {
+    min-height: 0;
+    background: none;
+  }
 }
 
-@media (min-width: @tablet-width) {
-  .header__nav {
-    display: flex;
-    width: auto;
-    margin: 0;
-  }
+.header__logo {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 13px;
 
-  .header__toggler {
-    display: none;
+  @media @tablet {
+    padding: 0;
   }
+}
+
+.header__program {
+  margin-bottom: 25px;
 }

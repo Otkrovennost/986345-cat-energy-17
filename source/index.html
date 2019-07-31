@@ -12,9 +12,13 @@
 <body class="page">
   <h1 class="visually-hidden">Кэт энерджи</h1>
   <header class="header">
-    <nav class="header__nav nav">
+    <nav class="header__nav nav nav--closed nav--nojs container">
       <a class="header__logo">
-        <img src="http://placehold.it/191x39" alt="Логотип кампании">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип кампании">
+        </picture>
       </a>
       <ul class="nav__list page__list">
         <li class="nav__item">
@@ -27,33 +31,37 @@
           <a class="nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
-      <button class="header__toggler header__toggler--closer">
+      <button class="nav__toggler">
         <span class="visually-hidden">Показать или скрыть меню</span>
       </button>
     </nav>
     <section class="header__program program">
-      <h2 class="visually-hidden">Подбор программы</h2>
+      <h3 class="visually-hidden">Подбор программы</h3>
       <div class="program__wrapper">
-        <b class="program__title">Функциональное питание для котов</b>
+        <h2 class="program__title">Функциональное питание для котов</h2>
         <p class="program__text">Занялся собой? Займись котом!</p>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img class="program__img" src="img/index-can-mobile@1x.png" alt="Корм для котов Cat Energy Pro">
+        </picture>
       </div>
-      <img class="program__img" src="../img/index-can-mobile@1x.png" width="280" height="270" alt="Корм для котов Cat Energy Pro">
       <a class="program__link button" href="form.html">Подобрать программу</a>
     </section>
   </header>
   <main class="content">
-    <section class="content__offers offers">
+    <section class="content__offers offers container">
       <h2 class="visually-hidden">Предложения программы</h2>
       <ul class="offers__list page__list">
         <li class="offers__item">
-          <b class="offers__title page__subtitle">Похудение</b>
+          <h3 class="offers__title page__subtitle">Похудение</h3>
           <p class="offers__text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
           <a class="offers__link" href="#nowhere">Каталог Slim</a>
         </li>
-        <li class="offers__item">
-          <b class="offers__title page__subtitle">Набор массы</b>
+        <li class="offers__item offers__item--pro">
+          <h3 class="offers__title page__subtitle">Набор массы</h3>
           <p class="offers__text">
             Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -62,7 +70,7 @@
         </li>
       </ul>
     </section>
-    <section class="content__advantages advantages">
+    <section class="content__advantages advantages container">
       <h2 class="advantages__title">Как это работает</h2>
       <ul class="advantages__list page__list">
         <li class="advantages__item">
@@ -88,37 +96,39 @@
       </ul>
     </section>
     <article class="content__story story">
-      <h2 class="story__title">Живой пример</h2>
-      <p class="story__text">
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-      </p>
-      <dl class="story__digits digits">
-        <dt class="digits__heading">Снижение веса</dt>
-        <dd class="digits__value">5 кг</dd>
-        <dt class="digits__heading">Затрачено времени</dt>
-        <dd class="digits__value">60 дней</dd>
-        <dt class="digits__costs-heading">Затраты на питание:</dt>
-        <dd class="digits__costs-value">15 000 руб.</dd>
-      </dl>
-      <h2 class="visually-hidden">Фото до и после программы</h2>
-      <input class="visually-hidden" id="slide-1" name="slide" type="radio" checked>
-      <input class="visually-hidden" id="slide-2" name="slide" type="radio">
-      <ul class="story__slider slider page__list">
-        <li class=" slider__item">
-          <img class="slider__img" src="img/cat-before.png" width="311" height="232" alt="Фото кота до программы">
-        </li>
-        <li class="slider__item">
-          <img class="slider__img" src="img/cat-after.png" width="251" height="240" alt="Фото кота после программы">
-        </li>
-      </ul>
-      <ul class="story__slider-checker checker page__list">
-        <li>
-          <label class="checker__prew" for="slide-1">Было</label>
-        </li>
-        <li>
-          <label class="checker__next" for="slide-2">Стало</label>
-        </li>
-      </ul>
+      <div class="story__ wrapper container">
+        <h2 class="story__title">Живой пример</h2>
+        <p class="story__text">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+        </p>
+        <dl class="story__digits digits">
+          <dt class="digits__heading">Снижение веса</dt>
+          <dd class="digits__value">5 кг</dd>
+          <dt class="digits__heading">Затрачено времени</dt>
+          <dd class="digits__value">60 дней</dd>
+          <dt class="digits__costs-heading">Затраты на питание:</dt>
+          <dd class="digits__costs-value">15 000 руб.</dd>
+        </dl>
+        <h2 class="visually-hidden">Фото до и после программы</h2>
+        <input class="visually-hidden" id="slide-1" name="slide" type="radio" checked>
+        <input class="visually-hidden" id="slide-2" name="slide" type="radio">
+        <ul class="story__slider slider page__list">
+          <li class=" slider__item">
+            <img class="slider__img" src="img/cat-before.png" width="311" height="232" alt="Фото кота до программы">
+          </li>
+          <li class="slider__item">
+            <img class="slider__img" src="img/cat-after.png" width="251" height="240" alt="Фото кота после программы">
+          </li>
+        </ul>
+        <ul class="story__slider-checker checker page__list">
+          <li>
+            <label class="checker__prew" for="slide-1">Было</label>
+          </li>
+          <li>
+            <label class="checker__next" for="slide-2">Стало</label>
+          </li>
+        </ul>
+      </div>
     </article>
   </main>
   <footer class="footer">
@@ -138,20 +148,37 @@
         </a>
       </p>
     </section>
-    <section class="footer__bottom">
+    <section class="footer__bottom container">
       <h2 class="visually-hidden">Информация о разработчиках и ссылки на социальные сети</h2>
       <a class="footer__logo">
         <img src="http://placehold.it/191x39" alt="Логотип кампании">
       </a>
       <ul class="footer__social social page__list">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="#" aria-label="Кэт Энерджи во Вконтакте"></a>
+          <a class="social__link social__link--vk" href="#" aria-label="Кэт Энерджи во Вконтакте">
+            <svg class="social__icon social__icon--vk" xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12">
+              <path d="M17.6 12c-.3 0-.9-.1-1.5-.5-.5-.3-.9-.7-1.3-1.2-.3-.3-.9-.9-1.1-.9-.2.1-.4.7-.3 1.2 0 .1 0 .6-.3.9-.3.3-.8.4-.9.4h-1.4c-.7 0-3.2-.2-5.4-2.3C2.5 7.1.2 2.2.1 2 0 1.6-.1 1.2.2.9s.8-.4 1-.4h3.1c.1 0 .4.1.7.3.3.2.4.5.5.6.7 1.5 1.5 2.8 2.6 4 .1-.4.2-1.4.1-2.3 0-.4-.1-.8-.2-1-.1-.1-.3-.2-.5-.2l-.6-.5c0-.5.5-.9.9-1.1.5-.2 1.3-.3 2.3-.3h.5c.9 0 1.2.1 1.6.1 1.2.3 1.2 1.3 1.1 2.5v1.6c0 .3 0 .8.1 1 .2-.1.6-.5 1.5-1.9.6-.9 1-1.9 1.1-2.1.1-.3.4-.7 1.2-.7h3.4c.7 0 1.2.2 1.3.7.2.5.1 1.3-1.7 3.5-.3.3-.5.6-.7.9-.5.4-.9 1-.9 1.1s.5.5.9.9c1.1.9 1.9 1.7 2.2 2.3.4.6.3 1 .2 1.3-.3.7-1.2.7-1.4.8h-2.8-.1zm-3.9-3.7c.7 0 1.2.6 1.8 1.2.4.4.7.8 1.1 1 .5.3 1 .3 1 .3h2.9c.1 0 .3-.1.4-.1 0 0 0-.1-.1-.1-.3-.5-1-1.3-2-2.1-.9-.7-1.3-1.1-1.4-1.7 0-.6.4-1.1 1.2-2.1.2-.2.4-.5.7-.8 1.1-1.4 1.4-2 1.5-2.3h-3.9c0 .4-.5 1.5-1.1 2.4-1.4 2.1-2 2.4-2.5 2.4-.1 0-.3 0-.4-.1-.7-.4-.7-1.4-.7-2.1V2.6c.1-1.3 0-1.3-.3-1.4-.3-.1-.5-.1-1.4-.1H10c-.5 0-1 0-1.4.1l.2.2c.4.5.4 1.5.4 1.7.1 1.3 0 2.9-.7 3.3-.1 0-.2.1-.4.1-.6 0-1.3-.7-2.5-2.5C5 2.9 4.5 1.8 4.5 1.8s0-.1-.1-.1-.2-.1-.2-.1h-3c.4.9 2.5 5 4.8 7.2 2 1.9 4.3 2 4.7 2h1.4s.2 0 .2-.1v-.1c0-.2 0-2 1.2-2.3h.2z" /></svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--inst" href="#" aria-label="Кэт Энерджи в Инстаграмме"></a>
+          <a class="social__link social__link--inst" href="#" aria-label="Кэт Энерджи в Инстаграмме">
+            <svg class="social__icon social__icon--insta" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="17" height="17" x="0" y="0" viewBox="0 0 16.1 16" xml:space="preserve">
+              <style>
+                .st0 {
+                  fill: #231f20
+                }
+              </style>
+              <path class="st0" d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2C2.4 15 1 13.6 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2C1.9 0 0 1.9 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z" />
+              <path class="st0" d="M8 4.9c1.7 0 3.1 1.4 3.1 3.1S9.7 11.1 8 11.1 4.9 9.7 4.9 8 6.3 4.9 8 4.9m0-1C5.7 3.9 3.9 5.7 3.9 8s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1S10.3 3.9 8 3.9z" />
+              <circle class="st0" cx="12.3" cy="3.7" r=".9" />
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--fb" href="#" aria-label="Кэт Энерджи в Фейсбуке"></a>
+          <a class="social__link social__link--fb" href="#" aria-label="Кэт Энерджи в Фейсбуке">
+            <svg class="social__icon social__icon--fb" xmlns="http://www.w3.org/2000/svg" width="10" height="19" viewBox="0 0 10 19">
+              <path d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z" /></svg>
+          </a>
         </li>
       </ul>
       <a class="footer__dev" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
@@ -162,6 +189,7 @@
       </a>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

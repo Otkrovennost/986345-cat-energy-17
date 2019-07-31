@@ -1,3 +1,28 @@
 .character {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   line-height: 14px;
+
+  @media @tablet {
+    justify-content: flex-start;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.character__key {
+  width: 150px;
+
+  @media @tablet {
+    width: 140px;
+  }
+}
+
+.character_-value {
+  width: 60px;
+
+  @media @tablet {
+    width: 50px;
+  }
 }

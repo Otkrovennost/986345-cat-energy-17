@@ -1,18 +1,110 @@
+.good {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media @tablet {
+    justify-content: center;
+    background-color: #f2f2f2;
+  }
+}
+
+.good__img {
+  display: block;
+
+  @media @tablet {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    max-height: 208px;
+    transform: translate(-50%, 132px);
+  }
+}
+
+.good__info {
+  width: 50%;
+
+  @media @tablet {
+    width: 250px;
+    margin: 0 35px;
+  }
+
+  @media @desktop {
+    margin: 0;
+  }
+}
+
 .good__title {
+  margin: 0;
+  padding: 22px 45px 12px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   font-family: @font-design;
   color: #111111;
   text-transform: uppercase;
+
+  &--all-list {
+    width: 100%;
+    margin: 0 0 8px;
+    padding-top: 79px;
+    text-align: center;
+
+    @media @tablet {
+      margin: 0 0 28px;
+      padding: 166px 95px 0 96px;
+    }
+  }
+
+  @media @tablet {
+    margin-top: 167px;
+    margin-bottom: 20px;
+    padding: 0 50px 0 50px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
 }
 
 .good__text {
+  width: 100%;
+  margin: 0 0 22px;
   font-size: 12px;
   line-height: 16px;
+  text-align: center;
+
+  @media @tablet {
+    margin: 0 0 85px;
+    padding-right: 79px;
+    padding-left: 80px;
+  }
 }
 
-.good__button--all-list {
-  color: @color-default;
-  background-color: #f2f2f2;
+.good__button {
+  width: 100%;
+  margin-bottom: 25px;
+
+  @media @tablet {
+    width: 249px;
+    margin-bottom: 40px;
+  }
+
+  @media @tablet {
+    width: 169px;
+  }
+
+  &--all-list {
+    color: @color-default;
+    background-color: #f2f2f2;
+
+    &:focus,
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+      background-color: #ebebeb;
+    }
+  }
 }

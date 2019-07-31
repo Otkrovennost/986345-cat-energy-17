@@ -2,7 +2,7 @@
   display: table;
   box-sizing: border-box;
   min-width: 280px;
-  padding: 12px 80px;
+  padding: 10px 50px;
   font-size: 16px;
   line-height: 20px;
   font-family: @font-design;
@@ -11,4 +11,22 @@
   color: #ffffff;
   text-transform: uppercase;
   background-color: #68b738;
+
+  &:focus,
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
+
+  @media @tablet {
+    min-width: 249px;
+  }
+
+  @media @desktop {
+    min-width: 169px;
+  }
 }

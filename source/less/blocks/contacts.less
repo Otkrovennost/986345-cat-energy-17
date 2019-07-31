@@ -1,11 +1,45 @@
-.contacts__text--partnership {
-  font-size: 16px;
-  line-height: 20px;
-  font-family: @font-design;
-  color: #111111;
-  text-transform: uppercase;
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 25px;
+  margin-left: 19px;
+  padding: 30px 0 26px;
+
+  @media @tablet {
+    justify-content: space-between;
+    margin-right: 72px;
+    margin-left: 71px;
+  }
 }
 
-.contacts__text--address {
-  line-height: 20px;
+.contacts__text {
+  width: 50%;
+  margin: 0;
+
+  &--partnership {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: @font-design;
+    color: #111111;
+    text-transform: uppercase;
+
+    @media @tablet {
+      width: 160px;
+      margin-right: 100px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  &--address {
+    width: 145px;
+    line-height: 20px;
+
+    @media @tablet {
+      width: 160px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
 }

@@ -1,10 +1,58 @@
-@media (min-width: @tablet-width) {
-  .nav__list {
+.nav {
+  position: relative;
+
+  @media @tablet {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 24px;
+  }
+
+  @media @desktop {
+    padding-top: 53px;
+  }
+}
+
+.nav--closed .nav__item {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.nav--nojs .nav__toggler {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.nav--nojs .nav__item {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+}
+
+.nav__list {
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    width: 516px;
+    padding: 20px 0;
+  }
+}
+
+.nav__item {
+  box-sizing: border-box;
+  padding: 23px 40px;
+  border-bottom: 1px solid #e6e6e6;
+
+  @media @tablet {
+    padding: 0;
+    border: none;
   }
 }
 
 .nav__link {
+  display: block;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -12,4 +60,86 @@
   text-align: center;
   color: #111111;
   text-transform: uppercase;
+
+  @media @tablet {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #222222;
+  }
+}
+
+.nav__link[href] {
+  &:focus,
+  &:hover {
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  @media @tablet {
+    &:focus,
+    &:hover {
+      color: rgba(17, 17, 17, 0.6);
+    }
+
+    &:active {
+      color: rgba(17, 17, 17, 0.3);
+    }
+  }
+}
+
+.nav__toggler {
+  position: absolute;
+  top: 23px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 25px;
+  height: 19px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.nav--closed .nav__toggler::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #111111;
+  box-shadow: 0 8px 0 0 #111111, 0 16px 0 0 #111111;
+}
+
+.nav--opened .nav__toggler {
+  top: 22px;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    width: 22px;
+    height: 2px;
+    background-color: #111111;
+  }
+
+  &::before {
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }

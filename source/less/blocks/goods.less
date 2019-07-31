@@ -1,7 +1,24 @@
 .goods__title {
+  margin: 0 0 30px;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
   font-family: @font-design;
   color: #111111;
+
+  @media @tablet {
+    margin: 0 0 165px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media @desktop {
+    margin-bottom: 156px;
+  }
+}
+
+.goods__wrapper {
+  @media @tablet {
+    margin-bottom: -100px;
+  }
 }
