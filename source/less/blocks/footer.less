@@ -6,10 +6,66 @@
   @media @tablet {
     display: flex;
     flew-wrap: wrap;
+    padding: 60px 0;
+  }
+}
+
+.footer__logo {
+  display: block;
+  padding: 39px 96px 31px 96px;
+  text-align: center;
+  border-bottom: 1px solid @color-border;
+
+  @media @tablet {
+    margin-right: auto;
+    padding: 0;
+    border: none;
+  }
+}
+
+.footer__dev-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 21px;
+
+  @media @tablet {
+    margin-left: auto;
+    padding: 0;
   }
 }
 
 .footer__dev {
+  display: block;
   font-size: 16px;
   line-height: 16px;
+
+  &--name {
+    @media @tablet {
+      margin-right: 23px;
+    }
+  }
+
+  &:active {
+    opacity: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.footer__dev-icon {
+  path {
+    fill: #666666;
+  }
+
+  &:focus,
+  &:hover {
+    path {
+      fill: #68b738;
+    }
+  }
+
+  &:active {
+    path {
+      opacity: 0.3;
+    }
+  }
 }

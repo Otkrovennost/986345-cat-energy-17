@@ -10,7 +10,22 @@
 
   &--inner {
     min-height: 0;
+    margin-bottom: 13px;
     background: none;
+
+    @media @desktop {
+      .nav__link {
+        color: #111111;
+      }
+    }
+
+    @media @tablet {
+      margin-bottom: 43px;
+    }
+
+    @media @desktop {
+      margin-bottom: 59px;
+    }
   }
 }
 
@@ -21,6 +36,10 @@
 
   @media @tablet {
     padding: 0;
+  }
+
+  @media @desktop {
+    margin-right: 517px;
   }
 }
 

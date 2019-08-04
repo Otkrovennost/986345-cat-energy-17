@@ -7,8 +7,8 @@
 .program__wrapper {
   position: relative;
   box-sizing: border-box;
-  margin-bottom: 136px;
-  padding: 27px 27px 168px 28px;
+  margin: 0 -20px 136px -20px;
+  padding: 25px 27px 168px 28px;
   text-align: center;
   color: #ffffff;
   background-color: #68b738;
@@ -18,20 +18,21 @@
   background-size: cover;
 
   @media @tablet {
-    margin-bottom: 47px;
-    padding: 48px 215px 0 117px;
+    margin: 0 0 47px 0;
+    padding: 44px 130px 0 87px;
     text-align: left;
     color: #111111;
     background: none;
   }
 
   @media @desktop {
-    padding: 102px 765px 0 190px;
+    z-index: 1;
+    padding: 93px 677px 5px 100px;
   }
 }
 
 .program__title {
-  margin: 0 0 24px 0;
+  margin: 0 0 25px 0;
   font-weight: inherit;
   font-size: 36px;
   line-height: 36px;
@@ -58,35 +59,40 @@
 
 .program__img {
   position: absolute;
-  top: 165px;
-  left: 21px;
+  bottom: -136px;
+  left: 0;
+  width: 100%;
+  text-align: center;
 
   @media @tablet {
-    top: 248px;
-    left: 31px;
-    z-index: -1;
+    bottom: -633px;
   }
 
   @media @desktop {
-    top: 24px;
-    left: 560px;
-    z-index: 1;
+    bottom: -237px;
+    left: 117px;
+    z-index: -1;
   }
 }
 
 .program__link {
   display: block;
   box-sizing: border-box;
-  width: 245px;
-  margin-left: 20px;
+  width: auto;
   padding: 10px 73px 10px 70px;
   font-size: 14px;
   line-height: 18px;
 
   @media @tablet {
-    margin-left: 115px;
-    padding: 17px 15px 17px 26px;
+    position: relative;
+    width: 245px;
+    margin-left: 87px;
+    padding: 17px 15px 17px 11px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media @desktop {
+    margin-left: 80px;
   }
 }

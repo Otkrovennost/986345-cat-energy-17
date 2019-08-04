@@ -3,6 +3,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid @color-border;
+
+  @media @tablet {
+    padding: 0;
+    border: none;
+  }
 }
 
 .social__link {
@@ -24,6 +31,10 @@
         fill-opacity: 0.3;
       }
     }
+  }
+
+  @media @tablet {
+    margin: 0 15px 20px;
   }
 }
 
