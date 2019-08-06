@@ -95,38 +95,56 @@
       </ul>
     </section>
     <article class="content__story story">
-      <div class="story__ wrapper container">
+      <div class="story__wrapper container">
         <h2 class="story__title">Живой пример</h2>
         <p class="story__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
         </p>
         <dl class="story__digits digits">
-          <dt class="digits__heading">Снижение веса</dt>
-          <dd class="digits__value">5 кг</dd>
-          <dt class="digits__heading">Затрачено времени</dt>
-          <dd class="digits__value">60 дней</dd>
-          <dt class="digits__costs-heading">Затраты на питание:</dt>
-          <dd class="digits__costs-value">15 000 руб.</dd>
+          <div class="digits__info">
+            <dt class="digits__heading">Снижение веса</dt>
+            <dd class="digits__value">5 кг</dd>
+          </div>
+          <div class="digits__info">
+            <dt class="digits__heading">Затрачено времени</dt>
+            <dd class="digits__value">60 дней</dd>
+          </div>
+          <div class="digits__info-costs">
+            <dt class="digits__costs-heading">Затраты на питание:</dt>
+            <dd class="digits__costs-value">15 000 руб.</dd>
+          </div>
         </dl>
         <h2 class="visually-hidden">Фото до и после программы</h2>
-        <input class="visually-hidden" id="slide-1" name="slide" type="radio" checked>
-        <input class="visually-hidden" id="slide-2" name="slide" type="radio">
+        <input class="story__input story__input--before visually-hidden" id="slide-1" name="slide" type="radio" checked>
+        <input class="story__input story__input--after visually-hidden" id="slide-2" name="slide" type="radio">
         <ul class="story__slider slider page__list">
           <li class=" slider__item">
-            <img class="slider__img" src="img/cat-before.png" width="311" height="232" alt="Фото кота до программы">
+            <label class="slider__label" for="slide-1">
+              <picture class="slider__img slider__img--before">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img src="img/before-mobile@1x.png" alt="Фото кота до программы">
+              </picture>
+            </label>
           </li>
           <li class="slider__item">
-            <img class="slider__img" src="img/cat-after.png" width="251" height="240" alt="Фото кота после программы">
+            <label class="slider__label" for="slide-2">
+              <picture class="slider__img slider__img--after">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                <img src="img/after-mobile@1x.png" alt="Фото кота после программы">
+              </picture>
+            </label>
           </li>
         </ul>
-        <ul class="story__slider-checker checker page__list">
-          <li>
-            <label class="checker__prew" for="slide-1">Было</label>
-          </li>
-          <li>
-            <label class="checker__next" for="slide-2">Стало</label>
-          </li>
-        </ul>
+        <div class="story__slider-checker checker page__list">
+          <label class="checker__prew" for="slide-1">Было</label>
+          <div class="checker__range">
+            <div class="checker__scale"></div>
+            <button class="checker__button" type="button" aria-label="До/после"></button>
+          </div>
+          <label class="checker__next" for="slide-2">Стало</label>
+        </div>
       </div>
     </article>
   </main>
@@ -143,7 +161,11 @@
       </div>
       <p class="footer__map map">
         <a class="map__href" href="https://www.google.com/maps" aria-label="Ссылка на сайт Google карты">
-          <img src="img/map.png" width="320" height="400" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+            <img src="img/bg-map-mobile@1x.png" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          </picture>
         </a>
       </p>
     </section>

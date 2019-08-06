@@ -1,4 +1,6 @@
 .digits {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 14px;
   line-height: 20px;
   font-family: @font-design;
@@ -6,15 +8,97 @@
   text-transform: uppercase;
 }
 
+.digits__info {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 124px;
+
+  &:nth-child(2n) {
+    margin-left: auto;
+  }
+
+  @media @tablet {
+    width: 162px;
+    margin-right: 42px;
+
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+  }
+}
+
+.digits__info-costs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 20px;
+
+  @media @tablet {
+    width: 300px;
+    padding: 0;
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
 .digits__heading {
+  z-index: 1;
+  align-self: center;
+  box-sizing: border-box;
+  width: 85px;
+  margin-top: -8px;
+  padding: 0 10px;
   font-size: 12px;
   line-height: 12px;
   font-family: @font-base;
+  text-align: center;
   color: @color-default;
   text-transform: lowercase;
+  background-color: #f2f2f2;
+
+  @media @tablet {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
 }
 
 .digits__value {
+  margin: 0;
+  padding: 15px 10px;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
+  border: 1px solid @color-border;
+  border-radius: 3px;
+
+  @media @tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.digits__costs-heading {
+  box-sizing: border-box;
+  width: 60%;
+  padding-left: 45px;
+
+  @media @tablet {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.digits__costs-value {
+  box-sizing: border-box;
+  width: 40%;
+  margin: 0;
+  padding-right: 45px;
+
+  @media @tablet {
+    width: 100%;
+    padding: 0;
+  }
 }

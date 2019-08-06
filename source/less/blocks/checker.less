@@ -1,7 +1,49 @@
 .checker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 16px;
   line-height: 20px;
   font-family: @font-design;
   color: #111111;
   text-transform: uppercase;
+}
+
+.checker__prew {
+  box-sizing: border-box;
+  width: 60px;
+  padding: 0 15px 0 5px;
+}
+
+.checker__next {
+  box-sizing: border-box;
+  width: 60px;
+  padding-left: 20px;
+}
+
+.checker__range {
+  position: relative;
+  width: 84px;
+}
+
+.checker__scale {
+  display: block;
+  height: 14px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.checker__button {
+  position: absolute;
+  top: 27%;
+  left: 7px;
+  display: block;
+  width: 35px;
+  height: 6px;
+  padding: 0;
+  background-color: #68b738;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
 }
