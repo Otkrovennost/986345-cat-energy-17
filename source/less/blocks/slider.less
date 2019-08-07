@@ -2,9 +2,17 @@
   position: relative;
 }
 
-.slider__img {
-  position: absolute;
-  bottom: 58px;
-  left: 0;
+.slider__preview {
   display: none;
+  height: 232px;
+
+  @media @tablet {
+    height: 517px;
+  }
+}
+
+.slider__img {
+  width: auto;
+  min-width: none;
+  max-width: none;
 }

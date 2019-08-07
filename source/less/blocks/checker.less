@@ -7,23 +7,43 @@
   font-family: @font-design;
   color: #111111;
   text-transform: uppercase;
+
+  @media @tablet {
+    padding-bottom: 75px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .checker__prew {
   box-sizing: border-box;
   width: 60px;
   padding: 0 15px 0 5px;
+
+  @media @tablet {
+    width: 132px;
+    padding: 0 10px 0 68px;
+  }
 }
 
 .checker__next {
   box-sizing: border-box;
   width: 60px;
   padding-left: 20px;
+
+  @media @tablet {
+    width: 132px;
+    padding: 0 10px 0 11px;
+  }
 }
 
 .checker__range {
   position: relative;
   width: 84px;
+
+  @media @tablet {
+    width: 444px;
+  }
 }
 
 .checker__scale {
@@ -32,6 +52,12 @@
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 6px;
+
+  @media @tablet {
+    height: 6px;
+    margin: 5px;
+    background-color: #dcdcdc;
+  }
 }
 
 .checker__button {
@@ -46,4 +72,35 @@
   border: 0;
   border-radius: 3px;
   outline: 0;
+
+  @media @tablet {
+    top: -8px;
+    left: 204px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px 0 #cdcdcd;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 8px;
+      height: 8px;
+      background-color: #68b738;
+      border-radius: 50%;
+    }
+  }
 }
