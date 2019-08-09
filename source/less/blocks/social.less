@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   padding: 22px 0;
+  border-top: 1px solid @color-border;
   border-bottom: 1px solid @color-border;
 
   @media @tablet {
@@ -15,22 +15,14 @@
 .social__link {
   margin: 0 20px 20px;
 
-  &:focus,
-  &:hover {
-    .social__icon {
-      path {
-        fill: #68b738;
-      }
-    }
+  &:focus .social__icon,
+  &:hover .social__icon {
+    fill: #68b738;
   }
 
-  &:active {
-    .social__icon {
-      path {
-        fill: #68b738;
-        fill-opacity: 0.3;
-      }
-    }
+  &:active .social__icon {
+    opacity: 0.3;
+    fill: #68b738;
   }
 
   @media @tablet {

@@ -1,4 +1,5 @@
 .story {
+  position: relative;
   background-color: #f2f2f2;
 
   @media @tablet {
@@ -11,9 +12,28 @@
   }
 }
 
-.story__title {
+.story__header {
   margin: 0 0 23px;
-  padding-top: 16px;
+
+  @media @tablet {
+    margin: 0 0 64px;
+  }
+}
+
+.story__block {
+  @media @tablet {
+    background: linear-gradient(to bottom, #ffffff 49%, #f2f2f2 49%);
+  }
+
+  @media @desktop {
+    background: none;
+    background-color: #f2f2f2;
+  }
+}
+
+.story__title {
+  margin: 0;
+  padding-top: 15px;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
@@ -21,7 +41,7 @@
   color: #111111;
 
   @media @tablet {
-    margin: 0 0 64px;
+    margin: 0;
     padding-top: 41px;
     font-size: 60px;
     line-height: 60px;
@@ -29,7 +49,7 @@
 }
 
 .story__text {
-  margin: 0 0 22px;
+  margin: 0 0 23px;
   padding-right: 5px;
 
   @media @tablet {
@@ -38,13 +58,30 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  @media @desktop {
+    width: 50%;
+  }
 }
 
 .story__digits {
-  margin-bottom: 37px;
+  margin: 0 0 27px;
 
   @media @tablet {
-    margin-bottom: 83px;
+    margin: 0 0 610px;
+  }
+
+  @media @desktop {
+    width: 50%;
+  }
+}
+
+.story__compare {
+  @media @desktop {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
   }
 }
 
@@ -58,4 +95,9 @@
 
 .story__slider {
   margin-bottom: 38px;
+}
+
+
+.story__slider-checker {
+  padding-bottom: 34px;
 }

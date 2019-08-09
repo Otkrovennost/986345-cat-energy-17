@@ -3,9 +3,7 @@
 }
 
 .footer__top {
-  @media @tablet {
-    background-color: #ffffff;
-  }
+  background-color: #ffffff;
 }
 
 .footer__bottom {
@@ -18,11 +16,11 @@
 
 .footer__logo {
   display: block;
-  padding: 39px 96px 31px 96px;
+  margin: 39px 0 31px;
   text-align: center;
-  border-bottom: 1px solid @color-border;
 
   @media @tablet {
+    margin: 0;
     margin-right: auto;
     padding: 0;
     border: none;
@@ -57,21 +55,15 @@
   }
 }
 
-.footer__dev-icon {
-  path {
-    fill: #666666;
-  }
+.footer__icon-dev {
+  fill: #666666;
 
   &:focus,
   &:hover {
-    path {
-      fill: #68b738;
-    }
+    fill: #68b738;
   }
 
   &:active {
-    path {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 }

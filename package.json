@@ -26,7 +26,7 @@
   },
   "browserslist": [
     "last 2 versions",
-    "IE 11",
+    "not dead",
     "Firefox ESR"
   ],
   "editorconfig-cli": [
