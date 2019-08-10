@@ -1,5 +1,5 @@
 .header {
-  @gradient: linear-gradient(to right, #ffffff 50%, #68b738 50%);
+  @gradient: linear-gradient(to right, #ffffff 50%, #64a83b 50%);
 
   @media @desktop {
     position: relative;
@@ -33,18 +33,25 @@
 
 .header__logo {
   display: block;
+  width: 191px;
+  height: 39px;
   padding-top: 10px;
   padding-bottom: 13px;
 
   @media @tablet {
-    padding: 0;
+    width: 174px;
+    height: 59px;
+    margin-right: 67px;
+    padding: 3px 0 0;
   }
 
   @media @desktop {
+    width: 203px;
+    height: 60px;
     margin-right: 517px;
   }
 }
 
 .header__program {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }

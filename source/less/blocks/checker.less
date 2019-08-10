@@ -9,31 +9,24 @@
   text-transform: uppercase;
 
   @media @tablet {
-    padding-bottom: 75px;
+    position: absolute;
+    bottom: 40px;
+    left: 83px;
     font-size: 20px;
     line-height: 20px;
   }
-}
 
-.checker__prew {
-  box-sizing: border-box;
-  width: 60px;
-  padding: 0 15px 0 5px;
-
-  @media @tablet {
-    width: 132px;
-    padding: 0 10px 0 68px;
+  @media @desktop {
+    bottom: 137px;
+    left: 24px;
   }
 }
 
-.checker__next {
-  box-sizing: border-box;
-  width: 60px;
-  padding-left: 20px;
+.checker__label {
+  padding: 0 15px 0 20px;
 
   @media @tablet {
-    width: 132px;
-    padding: 0 10px 0 11px;
+    padding-left: 15px;
   }
 }
 
@@ -44,26 +37,32 @@
   @media @tablet {
     width: 444px;
   }
-}
 
-.checker__scale {
-  display: block;
-  height: 14px;
-  background-color: #ffffff;
-  border: 1px solid #cdcdcd;
-  border-radius: 6px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 84px;
+    height: 12px;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    border-radius: 6px;
 
-  @media @tablet {
-    height: 6px;
-    margin: 5px;
-    background-color: #dcdcdc;
+    @media @tablet {
+      top: 7px;
+      left: 7px;
+      width: 427px;
+      height: 4px;
+      background-color: #dcdcdc;
+    }
   }
 }
 
 .checker__button {
   position: absolute;
-  top: 27%;
-  left: 7px;
+  top: 28%;
+  left: 8px;
   display: block;
   width: 35px;
   height: 6px;

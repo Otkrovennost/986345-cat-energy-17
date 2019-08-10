@@ -17,7 +17,7 @@
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип кампании">
+          <img src="img/logo-mobile.svg" alt="Логотип кампании">
         </picture>
       </a>
       <ul class="nav__list page__list">
@@ -122,7 +122,7 @@
           <input class="story__input story__input--before visually-hidden" id="slide-1" name="slide" type="radio" checked>
           <input class="story__input story__input--after visually-hidden" id="slide-2" name="slide" type="radio">
           <ul class="story__slider slider page__list">
-            <li class=" slider__item">
+            <li class=" slider__item slider__item--before">
               <label class="slider__label" for="slide-1">
                 <picture class="slider__preview slider__preview--before media-frame">
                   <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
@@ -131,7 +131,7 @@
                 </picture>
               </label>
             </li>
-            <li class="slider__item">
+            <li class="slider__item slider__item--after">
               <label class="slider__label" for="slide-2">
                 <picture class="slider__preview slider__preview--after media-frame">
                   <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
@@ -142,12 +142,11 @@
             </li>
           </ul>
           <div class="story__slider-checker checker page__list">
-            <label class="checker__prew" for="slide-1">Было</label>
+            <label class="checker__label" for="slide-1">Было</label>
             <div class="checker__range">
-              <div class="checker__scale"></div><!-- псевдо -->
               <button class="checker__button" type="button" aria-label="До/после"></button>
             </div>
-            <label class="checker__next" for="slide-2">Стало</label>
+            <label class="checker__label" for="slide-2">Стало</label>
           </div>
         </div>
       </div>

@@ -16,18 +16,11 @@
   margin: 0 0 23px;
 
   @media @tablet {
-    margin: 0 0 64px;
-  }
-}
-
-.story__block {
-  @media @tablet {
-    background: linear-gradient(to bottom, #ffffff 49%, #f2f2f2 49%);
+    margin-bottom: 64px;
   }
 
   @media @desktop {
-    background: none;
-    background-color: #f2f2f2;
+    margin-bottom: 77px;
   }
 }
 
@@ -48,6 +41,12 @@
   }
 }
 
+.story__block {
+  @media @desktop {
+    background-color: #f2f2f2;
+  }
+}
+
 .story__text {
   margin: 0 0 23px;
   padding-right: 5px;
@@ -61,6 +60,7 @@
 
   @media @desktop {
     width: 50%;
+    padding-top: 70px;
   }
 }
 
@@ -68,11 +68,12 @@
   margin: 0 0 27px;
 
   @media @tablet {
-    margin: 0 0 610px;
+    padding-bottom: 216px;
   }
 
   @media @desktop {
     width: 50%;
+    margin: 0;
   }
 }
 
@@ -91,6 +92,10 @@
 
 .story__input--after:checked ~ .slider .slider__preview--after {
   display: block;
+}
+
+.story__input--after:checked ~ .slider .slider__item--after {
+  width: 100%;
 }
 
 .story__slider {
