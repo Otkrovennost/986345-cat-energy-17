@@ -12,19 +12,19 @@
 }
 
 .nav--closed .nav__item {
-  @media (max-width: @mobile-only) {
+  @media @mobile-only {
     display: none;
   }
 }
 
 .nav--nojs .nav__toggler {
-  @media (max-width: @mobile-only) {
+  @media @mobile-only {
     display: none;
   }
 }
 
 .nav--nojs .nav__item {
-  @media (max-width: @mobile-only) {
+  @media @mobile-only {
     display: block;
   }
 }
@@ -36,8 +36,8 @@
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     box-sizing: border-box;
-    width: 480px;
     margin: 0;
     padding: 20px 0;
     border: none;
@@ -50,7 +50,7 @@
 
 .nav__link {
   display: block;
-  padding: 23px 40px;
+  padding: 22px 40px 23px 40px;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -63,8 +63,8 @@
 
   @media @tablet {
     margin-bottom: 10px;
-    margin-left: 30px;
-    padding: 0;
+    margin-left: 35px;
+    padding: 0 0 8px;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
@@ -77,27 +77,28 @@
     line-height: 25px;
     color: #ffffff;
   }
+
+  &--active {
+    @media @tablet {
+      border-bottom: 2px solid @color-design-base;
+    }
+  }
+
+  &--main {
+    @media @tablet {
+      border-bottom: 2px solid #ffffff;
+    }
+  }
 }
 
 .nav__link[href] {
   &:focus,
   &:hover {
-    color: rgba(17, 17, 17, 0.6);
+    opacity: 0.6;
   }
 
   &:active {
-    color: rgba(17, 17, 17, 0.3);
-  }
-
-  @media @tablet {
-    &:focus,
-    &:hover {
-      color: rgba(17, 17, 17, 0.6);
-    }
-
-    &:active {
-      color: rgba(17, 17, 17, 0.3);
-    }
+    opacity: 0.3;
   }
 }
 

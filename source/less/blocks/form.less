@@ -22,7 +22,7 @@
   text-transform: uppercase;
 
   @media @tablet {
-    margin: 0 0 68px;
+    margin: 0 0 66px;
     padding-right: 254px;
     font-size: 20px;
     line-height: 30px;
@@ -35,9 +35,23 @@
 }
 
 .form__group {
+  position: relative;
   margin: 0;
   padding: 0;
   border: none;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: -90px;
+  //   right: 50%;
+  //   left: 50%;
+  //   z-index: -1;
+  //   height: 3px;
+  //   margin-right: -50vw;
+  //   margin-left: -50vw;
+  //   background-color: @color-design-base;
+  // }
 
   &--fields {
     margin-bottom: 9px;
@@ -60,7 +74,7 @@
     border-bottom: 1px solid @color-border;
 
     @media @tablet {
-      margin: 0 0 80px;
+      margin: 0 0 75px;
       padding: 24px 34px 13px 22px;
       border: 1px solid @color-border;
     }
@@ -68,7 +82,7 @@
     @media @desktop {
       box-sizing: border-box;
       width: 570px;
-      margin-bottom: 75px;
+      margin-bottom: 67px;
     }
   }
 
@@ -76,7 +90,7 @@
     margin-bottom: 15px;
 
     @media @tablet {
-      margin-bottom: 50px;
+      margin-bottom: 43px;
     }
 
     @media @desktop {
@@ -88,11 +102,12 @@
     margin-bottom: 12px;
 
     @media @tablet {
-      margin-bottom: 49px;
+      margin-bottom: 41px;
     }
 
     @media @desktop {
       width: 100%;
+      margin-bottom: 44px;
     }
   }
 
@@ -166,18 +181,6 @@
   }
 }
 
-.form__icon-email {
-  position: absolute;
-  top: 16px;
-  left: 246px;
-}
-
-.form__icon-phone {
-  position: absolute;
-  top: 13px;
-  left: 246px;
-}
-
 .form__item-checks {
   font-size: 16px;
 
@@ -195,8 +198,12 @@
   text-transform: none;
 
   @media @tablet {
-    padding: 14px 0 0 62px;
+    padding: 16px 0 0 62px;
     font-size: 16px;
+  }
+
+  @media @desktop {
+    padding: 15px 0 0 83px;
   }
 }
 
@@ -209,14 +216,14 @@
   text-transform: none;
 
   @media @tablet {
-    margin-bottom: 84px;
+    margin-bottom: 78px;
   }
 
   &--addition {
     margin: 0 0 32px;
 
     @media @tablet {
-      margin: 0 0 65px;
+      margin: 0 0 59px;
     }
   }
 }
@@ -256,15 +263,66 @@
   box-sizing: border-box;
   width: 100%;
   min-width: 50%;
-  padding: 13px 0 13px 10px;
+  padding: 13px 5px 13px 13px;
   font: inherit;
   color: @color-default;
   text-transform: inherit;
+
+  @media @tablet {
+    padding-left: 21px;
+  }
+
+  &--comment {
+    resize: vertical;
+
+    @media @tablet {
+      padding: 13px 5px 16px 13px;
+      padding-left: 18px;
+    }
+  }
+
+  &--email {
+    padding-left: 10px;
+
+    @media @tablet {
+      padding-left: 25px;
+    }
+  }
+
+  &--phone {
+    padding-left: 10px;
+
+    @media @tablet {
+      padding-left: 18px;
+    }
+  }
 }
 
 .form__field::placeholder {
   color: inherit;
   opacity: 1;
+}
+
+
+.form__icon {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+
+  @media @tablet {
+    top: 18px;
+    right: 21px;
+  }
+
+  &--phone {
+    top: 14px;
+    right: 12px;
+
+    @media @tablet {
+      top: 16px;
+      right: 17px;
+    }
+  }
 }
 
 .form__button-block {
@@ -275,11 +333,14 @@
 }
 
 .form__button {
+  width: 100%;
   margin-bottom: 21px;
 
   @media @tablet {
+    width: auto;
     min-width: 283px;
-    padding: 15px 30px;
+    margin: 0;
+    padding: 16px 30px;
     font-size: 20px;
   }
 
@@ -296,9 +357,8 @@
   box-sizing: border-box;
   width: 30px;
   height: 30px;
-  border: 1px solid #111111;
+  border: 1px solid #cdcdcd;
   border-radius: 50%;
-  opacity: 0.228;
 
   @media @tablet {
     top: -1px;
@@ -316,7 +376,7 @@
   box-sizing: border-box;
   width: 12px;
   height: 12px;
-  background-color: #68b738;
+  background-color: @color-design-base;
   border-radius: 50%;
 
   @media @tablet {
@@ -335,13 +395,40 @@
   box-sizing: border-box;
   width: 30px;
   height: 30px;
-  border: 1px solid #111111;
+  border: 1px solid #cdcdcd;
   border-radius: 3px;
-  opacity: 0.228;
 
   @media @tablet {
     top: -1px;
     width: 40px;
     height: 40px;
   }
+}
+
+.form__checker--checkbox:checked + .form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  width: 22px;
+  height: 17px;
+  background-image: url("icon-tick.svg");
+
+  @media @tablet {
+    left: 10px;
+  }
+}
+
+.form__checker:focus + .form__label::before,
+.form__checker:hover + .form__label::before {
+  border: 1px solid #bababa;
+}
+
+.form__checker:active + .form__label::before {
+  border: 1px solid #bababa;
+  opacity: 0.3;
+}
+
+.form__checker:active + .form__label::after {
+  opacity: 0.3;
 }

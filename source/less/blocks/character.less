@@ -8,6 +8,7 @@
     justify-content: flex-start;
     width: 250px;
     margin-left: auto;
+    padding-top: 5px;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
@@ -26,10 +27,15 @@
   @media @tablet {
     width: 157px;
   }
+
+  @media @desktop {
+    text-align: left;
+  }
 }
 
 .character__value {
   width: 60px;
+  text-align: right;
 
   @media @tablet {
     width: 50px;

@@ -23,32 +23,36 @@
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
-    padding: 26px 37px;
-    border: 1px solid @color-border;
+    padding: 26px 39px 26px 39px;
+    border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
   @media @desktop {
-    padding: 17px 0;
+    padding: 16px 0;
+    border: none;
+    border-bottom: 1px solid @color-border;
   }
 }
 
 .extra-product__heading {
+  position: relative;
   margin: 0;
-  padding-bottom: 33px;
+  padding: 5px 0 35px 0;
   font-weight: 400;
   line-height: 24px;
   font-family: @font-design;
   color: #111111;
+  background-color: #ffffff;
 
   @media @tablet {
     margin-bottom: 80px;
-    padding: 0 0 0 36px;
+    padding: 0 38px 0 36px;
     font-size: 36px;
     line-height: 36px;
   }
 
   @media @desktop {
-    padding: 0;
+    padding: 0 35px 0 0;
   }
 }
 
@@ -64,7 +68,7 @@
 
   @media @tablet {
     width: 200px;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -96,8 +100,13 @@
 .extra-product__gift {
   margin-top: 39px;
 
-  @media @desktop {
+  @media @tablet {
     box-sizing: border-box;
+    width: 100%;
+    margin-top: 71px;
+  }
+
+  @media @desktop {
     width: 245px;
     margin: 0 0 0 auto;
   }

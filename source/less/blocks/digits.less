@@ -1,11 +1,16 @@
 .digits {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   font-size: 14px;
   line-height: 20px;
   font-family: @font-design;
   color: #111111;
   text-transform: uppercase;
+
+  @media @desktop {
+    justify-content: flex-start;
+  }
 }
 
 .digits__info {
@@ -13,35 +18,16 @@
   flex-direction: column-reverse;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: 124px;
+  width: calc(50% - 16px);
   margin-bottom: 10px;
 
-  &:nth-child(2n) {
-    margin-left: auto;
-  }
-
   @media @tablet {
-    width: 162px;
+    width: calc(25% - 16px);
     margin-right: 42px;
-
-    &:nth-child(2n) {
-      margin-left: 0;
-    }
   }
-}
 
-.digits__info-costs {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 11px;
-  padding-top: 9px;
-
-  @media @tablet {
-    width: 300px;
-    padding: 11px 0 0;
-    font-size: 20px;
-    text-align: right;
+  @media @desktop {
+    width: 162px;
   }
 }
 
@@ -50,8 +36,8 @@
   align-self: center;
   box-sizing: border-box;
   width: 85px;
-  margin-top: -8px;
-  padding: 0 10px;
+  margin: -8px 0 0;
+  padding: 0 8px;
   font-size: 12px;
   line-height: 12px;
   font-family: @font-base;
@@ -61,16 +47,20 @@
   background-color: #f2f2f2;
 
   @media @tablet {
-    width: 150px;
+    width: 145px;
     font-size: 14px;
     line-height: 14px;
     background-color: #ffffff;
+  }
+
+  @media @desktop {
+    background-color: #f2f2f2;
   }
 }
 
 .digits__value {
   margin: 0;
-  padding: 15px 10px;
+  padding: 15px 20px 16px 20px;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
@@ -83,25 +73,40 @@
   }
 }
 
-.digits__costs-heading {
-  box-sizing: border-box;
-  width: 60%;
-  padding-left: 45px;
+
+.digits__info-costs {
+  width: 100%;
+  margin-bottom: 11px;
+  margin-left: 47px;
+  padding-top: 9px;
 
   @media @tablet {
+    width: 300px;
+    margin: 0 0 auto;
+    padding-top: 2px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media @desktop {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 0;
   }
 }
 
+.digits__costs-heading,
 .digits__costs-value {
-  box-sizing: border-box;
-  width: 40%;
+  display: inline;
   margin: 0;
-  padding-right: 45px;
 
   @media @tablet {
-    width: 100%;
-    padding: 0;
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media @desktop {
+    margin-top: 45px;
+    margin-right: 64px;
   }
 }

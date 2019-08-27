@@ -1,0 +1,267 @@
+.compare {
+  @media @desktop {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.compare__list {
+  position: relative;
+  display: table;
+  width: 280px;
+  height: 240px;
+  margin: 0 auto 28px;
+  padding: 0;
+  background-color: inherit;
+
+  @media @tablet {
+    width: 100%;
+    height: 634px;
+    margin: 0;
+  }
+
+  @media @desktop {
+    height: 100%;
+  }
+}
+
+.compare__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  background-color: inherit;
+
+  @media @tablet {
+    height: 100%;
+    background-color: inherit;
+    background-image: linear-gradient(#ffffff 172px, #f2f2f2 172px);
+  }
+
+  @media @desktop {
+    background-image: linear-gradient(#ffffff 193px, #f2f2f2 193px);
+  }
+
+  &--after {
+    width: 0;
+
+    @media @tablet {
+      overflow: hidden;
+      background-image: linear-gradient(#ffffff 172px, #eaeaea 172px);
+    }
+
+    @media @desktop {
+      background-image: linear-gradient(#ffffff 193px, #eaeaea 193px);
+    }
+  }
+}
+
+.compare__img {
+  height: 240px;
+
+  @media @tablet {
+    height: 520px;
+  }
+}
+
+.compare__bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: @font-design;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media @tablet {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media @desktop {
+    top: 561px;
+    bottom: auto;
+  }
+}
+
+.compare__label {
+  position: relative;
+  max-width: 50%;
+
+  @media @mobile-only {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      width: 41px;
+      height: 12px;
+      background-color: #ffffff;
+      border: 1px solid #cdcdcd;
+      cursor: pointer;
+    }
+
+    &::after {
+      position: absolute;
+      top: 7px;
+      width: 35px;
+      height: 6px;
+      background-color: @color-design-base;
+      border-radius: 5px;
+      pointer-events: none;
+    }
+
+    &--before {
+      padding-right: 60px;
+
+      &::before {
+        right: 0;
+        border-right: none;
+        border-radius: 5px 0 0 5px;
+      }
+
+      &::after {
+        content: "";
+        right: 0;
+      }
+    }
+
+    &--after {
+      padding-left: 60px;
+
+      &::before {
+        left: 0;
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+      }
+
+      &::after {
+        left: 0;
+      }
+    }
+  }
+
+  @media @tablet {
+    max-width: 150px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c4c4c4;
+    cursor: pointer;
+  }
+}
+
+.compare__range {
+  position: relative;
+  z-index: 1;
+  display: none;
+  width: 402px;
+  height: 6px;
+  margin: 6px 35px;
+
+  @media @tablet {
+    display: block;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: -13px;
+    bottom: 0;
+    left: -13px;
+    background-color: #dcdcdc;
+    border-radius: 2px;
+
+    @media @tablet {
+      content: "";
+    }
+  }
+}
+
+.compage__input-group {
+  display: none;
+
+  @media @tablet {
+    display: block;
+  }
+}
+
+.compare__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 394px;
+  height: 4px;
+  margin: 0;
+  opacity: 0;
+}
+
+.compare__pin {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  margin: -13px 0 0 -13px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  @media @tablet {
+    content: "";
+  }
+
+  &::before {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 8px;
+    height: 8px;
+    background-color: @color-design-base;
+    border-radius: 50%;
+
+    @media @tablet {
+      content: "";
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    border: 2px solid @color-design-base;
+  }
+}
+
+.compare__checker--after:checked ~ .compare__list .compare__item--after {
+  width: 100%;
+}
+
+.compare__checker--after:checked ~ .compare__list .compare__item--before {
+  width: 0;
+}
+
+.compare__checker--after:checked ~ .compare__bar .compare__label--after::after {
+  content: "";
+}
+
+.compare__checker--after:checked ~ .compare__bar .compare__label--before::after {
+  content: none;
+}
+
+.compare__checker--before:checked ~ .compare__bar .compare__pin {
+  left: 0;
+}
+
+.compare__checker--after:checked ~ .compare__bar .compare__pin {
+  left: 100%;
+}

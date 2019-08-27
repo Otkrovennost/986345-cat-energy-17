@@ -1,20 +1,11 @@
-.program {
-  @media @tablet {
-    margin-bottom: 529px;
-  }
-
-  @media @desktop {
-    margin-bottom: 0;
-  }
-}
-
 .program__wrapper {
+  position: relative;
   box-sizing: border-box;
-  margin: 0 -20px 135px -20px;
-  padding: 28px 27px 168px 28px;
+  margin: 0 -20px 136px -20px;
+  padding: 26px 27px 168px 28px;
   text-align: center;
   color: #ffffff;
-  background-color: #68b738;
+  background-color: @color-design-base;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 100%;
@@ -22,7 +13,7 @@
 
   @media @tablet {
     margin: 0 0 45px 0;
-    padding: 44px 130px 0 87px;
+    padding: 34px 130px 0 87px;
     text-align: left;
     color: #111111;
     background: none;
@@ -31,7 +22,7 @@
   @media @desktop {
     width: 50%;
     margin-bottom: 52px;
-    padding: 93px 50px 0 79px;
+    padding: 83px 50px 0 79px;
   }
 }
 
@@ -63,27 +54,23 @@
 
 .program__img {
   position: absolute;
-  bottom: 160px;
+  bottom: -137px;
   left: 0;
   width: 100%;
-  text-align: center;
 
   @media @tablet {
-    bottom: -286px;
+    bottom: -630px;
   }
 
   @media @desktop {
-    bottom: 50px;
-    left: calc(50% - 160px);
-    width: auto;
+    bottom: -242px;
+    left: calc(100% - 160px);
   }
 }
 
 .program__link {
   display: block;
   box-sizing: border-box;
-  width: auto;
-  padding: 10px 73px 10px 70px;
   font-size: 14px;
   line-height: 18px;
 

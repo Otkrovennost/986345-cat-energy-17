@@ -1,7 +1,6 @@
 .button {
   display: table;
   box-sizing: border-box;
-  min-width: 280px;
   padding: 10px 50px;
   font-size: 16px;
   line-height: 20px;
@@ -10,8 +9,16 @@
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #68b738;
+  background-color: @color-design-base;
   border: none;
+
+  @media @tablet {
+    min-width: 249px;
+  }
+
+  @media @desktop {
+    min-width: 169px;
+  }
 
   &:focus,
   &:hover {
@@ -21,13 +28,5 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5eaa2f;
-  }
-
-  @media @tablet {
-    min-width: 249px;
-  }
-
-  @media @desktop {
-    min-width: 169px;
   }
 }
