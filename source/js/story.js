@@ -1,43 +1,41 @@
-"use strict";
+var el = document.querySelector(".compare");
 
-(() => {
-  const el = document.querySelector(".compare");
+if (el) {
+  el.classList.add("compare--js");
+  var after = el.querySelector(".compare__item--after");
+  var afterImage = after.querySelector("compare__img");
+  var input = el.querySelector(".compare__input");
+  var pin = el.querySelector(".compare__pin");
+  var beforeLabel = el.querySelector(".compare__label--before");
+  var afterLabel = el.querySelector(".compare__label--after");
 
-  if (el) {
-    el.classList.add("compare--js");
-    const after = el.querySelector(".compare__item--after");
-    const afterImage = after.querySelector("compare__img");
-    const input = el.querySelector(".compare__input");
-    const pin = el.querySelector(".compare__pin");
-    const beforeLabel = el.querySelector(".compare__label--before");
-    const afterLabel = el.querySelector(".compare__label--after");
+  var setStyles = function (val) {
+    pin.style.left = val;
+    after.style.width = val;
+  };
 
-    const setStyles = (val) => {
-      pin.style.left = val;
-      after.style.width = val;
-    };
-
-    const setAfterImagePos = () => {
-      if (window.innerWidth < 768) {
-        beforeLabel.click();
-      } else {
-        const imgWidth = afterImage.clientWidth;
-        const elWidth = el.clientWidth;
-        afterImage.style.right = "${(elWidth - imgWidth) / 2}px";
-      }
-    };
-
-    const inputHandler = () => setStyles("${input.value}%");
-
-    input.addEventListener("input", inputHandler);
-    input.addEventListener("change", inputHandler);
-    beforeLabel.addEventListener("click", () => setStyles("0"));
-    afterLabel.addEventListener("click", () => setStyles("100%"));
-    window.addEventListener("resize", setAfterImagePos);
-
-    setAfterImagePos();
-    if (window.innerWidth >= 768) {
-      setStyles("50%");
+  var setAfterImagePos = function () {
+    if (window.innerWidth < 768) {
+      beforeLabel.click();
+    } else {
+      var imgWidth = afterImage.clientWidth;
+      var elWidth = el.clientWidth;
+      afterImage.style.right = "${(elWidth - imgWidth) / 2}px";
     }
+  };
+
+  var inputHandler = function () {
+    etStyles("${input.value}%");
+  };
+
+  input.addEventListener("input", inputHandler);
+  input.addEventListener("change", inputHandler);
+  beforeLabel.addEventListener("click", function () { setStyles("0") });
+  afterLabel.addEventListener("click", function () { setStyles("100%") });
+  window.addEventListener("resize", setAfterImagePos);
+
+  setAfterImagePos();
+  if (window.innerWidth >= 768) {
+    setStyles("50%");
   }
-})();
+});
