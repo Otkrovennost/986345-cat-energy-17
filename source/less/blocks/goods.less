@@ -1,4 +1,6 @@
 .goods__header {
+  margin: 0 -20px;
+
   @media @tablet {
     margin: 0 0 24px;
   }
@@ -9,16 +11,18 @@
 }
 
 .goods__title {
-  margin: 0 0 30px;
+  margin: 0;
+  padding: 0 0 30px 20px;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
   font-family: @font-design;
   color: #111111;
+  border-bottom: 1px solid #ededed;
 
   @media @tablet {
-    margin: 0;
     font-size: 60px;
     line-height: 60px;
+    border-bottom: none;
   }
 }

@@ -11,7 +11,7 @@
   box-sizing: border-box;
   margin-bottom: 20px;
   padding: 30px 22px 17px 20px;
-  background-color: #f2f2f2;
+  background-color: @color-background-base;
 
   @media @tablet {
     margin-bottom: 32px;
@@ -137,7 +137,7 @@
 .offers__text {
   margin: 0 0 19px;
   padding-bottom: 22px;
-  border-bottom: 1px solid @color-border;
+  border-bottom: 1px solid #d9d9d9;
 
   @media @tablet {
     margin-bottom: 56px;
@@ -166,7 +166,7 @@
     line-height: 20px;
   }
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     top: 6px;
@@ -175,11 +175,38 @@
     height: 12px;
     background-image: url("icon-right-arrow-verylong.svg");
     background-repeat: no-repeat;
-    background-position: 50%  100%;
+    background-position: right center;
+    background-size: 32px 11px;
 
     @media @tablet {
       top: 8px;
       right: -47px;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    &::after {
+      right: -43px;
+      width: 32px;
+
+      @media @tablet {
+        right: -54px;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      right: -43px;
+      width: 32px;
+      opacity: 0.3;
+
+      @media @tablet {
+        right: -54px;
+      }
     }
   }
 }
