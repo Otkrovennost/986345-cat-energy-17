@@ -125,6 +125,8 @@
 }
 
 .form__group-list {
+  clear: both;
+
   &--addition {
     @media @tablet {
       display: flex;
@@ -179,6 +181,10 @@
       margin-right: 80px;
     }
   }
+
+  &--feedback {
+    clear: both;
+  }
 }
 
 .form__item-checks {
@@ -209,6 +215,8 @@
 
 .form__title {
   position: relative;
+  float: left;
+  width: 100%;
   margin-bottom: 32px;
   line-height: 24px;
   color: #111111;
