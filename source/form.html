@@ -47,14 +47,14 @@
       </p>
       <fieldset class="form__group form__group--fields">
         <legend class="visually-hidden">Информация о Вашем питомце</legend>
-        <ul class=" form__group-list page__list">
+        <ul class=" form__group-list form__group-list--fields page__list">
           <li class="form__item">
             <label class="form__label form__label--invalid" for="cat-name">Имя:*</label>
-            <input class="form__field" id="cat-name" name="cat-name" type="text" placeholder="Барсик">
+            <input class="form__field" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
           </li>
           <li class="form__item">
             <label class="form__label" for="cat-weight">Вес (кг):*</label>
-            <input class="form__field" id="cat-weight" name="cat-weight" type="text" placeholder="7">
+            <input class="form__field" id="cat-weight" name="cat-weight" type="text" placeholder="7" required>
           </li>
           <li class="form__item">
             <label class="form__label" for="cat-age">Возраст (лет):</label>
@@ -86,14 +86,14 @@
         <ul class="form__group-list form__group-list--contacts page__list">
           <li class="form__item form__item--email">
             <label class="form__label form__label--invalid" for="email">E-mail:*</label>
-            <input class="form__field form__field--email" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
+            <input class="form__field form__field--email" id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
             <svg class="form__icon form__icon--email" width="18" height="14">
               <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
           </li>
           <li class="form__item">
             <label class="form__label" for="tel">Телефон:*</label>
-            <input class="form__field form__field--phone" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90">
+            <input class="form__field form__field--phone" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90" required>
             <svg class="form__icon form__icon--phone" width="21" height="21">
               <use xlink:href="img/sprite.svg#icon-phone"></use>
             </svg>

@@ -50,6 +50,7 @@
 
 .story__block {
   @media @desktop {
+    position: relative;
     padding-top: 70px;
     padding-bottom: 72px;
     background-color: @color-background-base;
@@ -91,5 +92,15 @@
 
   @media @tablet {
     margin: 0;
+  }
+}
+
+.story__compare {
+  @media @desktop {
+    position: absolute;
+    top: -193px;
+    right: 0;
+    width: 50%;
+    height: calc(100% + 193px);
   }
 }

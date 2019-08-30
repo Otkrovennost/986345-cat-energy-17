@@ -40,19 +40,6 @@
   padding: 0;
   border: none;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: -90px;
-  //   right: 50%;
-  //   left: 50%;
-  //   z-index: -1;
-  //   height: 3px;
-  //   margin-right: -50vw;
-  //   margin-left: -50vw;
-  //   background-color: @color-design-base;
-  // }
-
   &--fields {
     margin-bottom: 9px;
 
@@ -159,6 +146,12 @@
       }
     }
   }
+
+  &--fields {
+    @media @desktop {
+      padding-bottom: 45px;
+    }
+  }
 }
 
 .form__item {
@@ -176,16 +169,15 @@
     line-height: 20px;
   }
 
-  &--email {
-    @media @desktop {
-      margin-right: 80px;
-    }
-  }
-
   &--feedback {
     clear: both;
   }
 }
+
+.form__group-list--contacts .form__item:nth-child(odd) {
+  margin-right: 80px;
+}
+
 
 .form__item-checks {
   font-size: 16px;
@@ -347,7 +339,7 @@
     width: auto;
     min-width: 283px;
     margin: 0;
-    padding: 16px 30px;
+    padding: 15px 30px;
     font-size: 20px;
   }
 
