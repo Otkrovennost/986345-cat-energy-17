@@ -1,0 +1,59 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid @color-border;
+  border-bottom: 1px solid @color-border;
+
+  @media @tablet {
+    width: 300px;
+    padding: 0;
+    border: none;
+  }
+}
+
+.social__link {
+  margin: 0 22px 20px;
+  color: #666666;
+
+  @media @tablet {
+    margin: 0 15px 20px;
+  }
+
+  &:focus,
+  &:hover {
+    color: @color-design-base;
+  }
+
+  &:active .social__icon {
+    color: @color-design-base;
+    opacity: 0.3;
+  }
+}
+
+.social__icon {
+  fill: currentColor;
+
+  &--vk {
+    @media @tablet {
+      width: 30px;
+      height: 16px;
+    }
+  }
+
+  &--insta {
+    @media @tablet {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--fb {
+    @media @tablet {
+      width: 14px;
+      height: 28px;
+    }
+  }
+}

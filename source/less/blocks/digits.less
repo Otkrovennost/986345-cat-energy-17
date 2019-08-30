@@ -1,20 +1,112 @@
 .digits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-size: 14px;
   line-height: 20px;
   font-family: @font-design;
   color: #111111;
   text-transform: uppercase;
+
+  @media @desktop {
+    justify-content: flex-start;
+  }
+}
+
+.digits__info {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: calc(50% - 16px);
+  margin-bottom: 10px;
+
+  @media @tablet {
+    width: calc(25% - 16px);
+    margin-right: 42px;
+  }
+
+  @media @desktop {
+    width: 162px;
+  }
 }
 
 .digits__heading {
+  z-index: 1;
+  align-self: center;
+  box-sizing: border-box;
+  width: 85px;
+  margin: -8px 0 0;
+  padding: 0 8px;
   font-size: 12px;
   line-height: 12px;
   font-family: @font-base;
+  text-align: center;
   color: @color-default;
   text-transform: lowercase;
+  background-color: @color-background-base;
+
+  @media @tablet {
+    width: 145px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @media @desktop {
+    background-color: @color-background-base;
+  }
 }
 
 .digits__value {
+  margin: 0;
+  padding: 15px 20px 16px 20px;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
+  border: 1px solid @color-border;
+  border-radius: 3px;
+
+  @media @tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+
+.digits__info-costs {
+  width: 100%;
+  margin-bottom: 11px;
+  margin-left: 47px;
+  padding-top: 9px;
+
+  @media @tablet {
+    width: 300px;
+    margin: 0 0 auto;
+    padding-top: 2px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media @desktop {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.digits__costs-heading,
+.digits__costs-value {
+  display: inline;
+  margin: 0;
+
+  @media @tablet {
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media @desktop {
+    margin-top: 45px;
+    margin-right: 64px;
+  }
 }

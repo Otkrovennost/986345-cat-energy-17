@@ -1,7 +1,158 @@
+.advantages__list {
+  counter-reset: item_number;
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .advantages__title {
+  margin: 0 0 30px;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
   font-family: @font-design;
   color: #111111;
+
+  @media @tablet {
+    margin: 0 0 42px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 0 26px;
+  padding-left: 80px;
+  counter-increment: item_number;
+
+  @media @tablet {
+    width: 50%;
+    margin-bottom: 54px;
+    padding: 141px 90px 50px 0;
+
+    &:nth-child(2n) {
+      padding: 141px 70px 50px 29px;
+    }
+  }
+
+  @media @desktop {
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+    padding: 0 0 47px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    display: block;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @color-design-base;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 50px;
+
+    @media @tablet {
+      top: 31px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    content: counter(item_number);
+    position: absolute;
+    top: 15px;
+    right: 109px;
+    z-index: -1;
+    display: none;
+    min-width: 136px;
+    font-size: 281px;
+    line-height: 235px;
+    font-family: "Oswald", "Arial", sans-serif;
+    text-align: center;
+    color: @color-background-base;
+
+    @media @tablet {
+      display: block;
+    }
+
+    @media @desktop {
+      right: -1px;
+    }
+  }
+
+  &:nth-child(2n) {
+    @media @desktop {
+      padding: 0 0 50px 0;
+    }
+
+    &::before {
+      @media @tablet {
+        left: 30px;
+      }
+
+      @media @desktop {
+        left: 0;
+      }
+    }
+
+    &::after {
+      right: 78px;
+
+      @media @desktop {
+        right: -4px;
+      }
+    }
+  }
+
+  &:nth-child(4n) {
+    @media @desktop {
+      margin-right: 0;
+    }
+  }
+
+  &--leaf::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--powder::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--dining::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--clock {
+    &::before {
+      background-image: url("../img/advantage-clock@1x.png");
+    }
+
+    .advantages__text {
+      padding-right: 0;
+    }
+  }
+}
+
+.advantages__text {
+  margin: 0;
+
+  @media @tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media @desktop {
+    padding-top: 142px;
+    padding-right: 20px;
+  }
 }

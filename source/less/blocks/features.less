@@ -1,5 +1,44 @@
 .features {
-  margin-bottom: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
   font-size: 12px;
   line-height: 16px;
+
+  @media @tablet {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media @desktop {
+    padding: 0 39px;
+  }
+}
+
+.features__name {
+  box-sizing: border-box;
+  width: 50%;
+  padding-right: 20px;
+
+  @media @tablet {
+    padding-top: 7px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid @color-border;
+  }
+}
+
+.features__value {
+  box-sizing: border-box;
+  width: 50%;
+  margin: 0;
+  padding-left: 20px;
+  text-align: right;
+
+  @media @tablet {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid @color-border;
+  }
 }

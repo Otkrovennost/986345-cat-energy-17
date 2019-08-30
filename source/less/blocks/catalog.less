@@ -1,0 +1,36 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+
+  @media @tablet {
+    width: auto;
+    margin: 0 0 0 -60px;
+  }
+
+  @media @desktop {
+    margin-left: -80px;
+  }
+}
+
+.catalog__item {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ededed;
+
+  @media @tablet {
+    width: 324px;
+    margin-top: 139px;
+    margin-left: 60px;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  @media @desktop {
+    width: 245px;
+    margin-top: 142px;
+    margin-left: 80px;
+  }
+}

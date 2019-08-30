@@ -1,11 +1,95 @@
 .story {
-  background-color: #f2f2f2;
+  position: relative;
+  padding-bottom: 35px;
+  background-color: @color-background-base;
+
+  @media @tablet {
+    padding: 0;
+    background-color: transparent;
+    border-top: 1px solid @color-border;
+  }
+
+  @media @desktop {
+    border: none;
+  }
+}
+
+.story__header {
+  margin: 0 0 23px;
+
+  @media @tablet {
+    margin-bottom: 64px;
+  }
+
+  @media @desktop {
+    margin-bottom: 76px;
+  }
 }
 
 .story__title {
+  margin: 0;
+  padding-top: 14px;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
   font-family: @font-design;
   color: #111111;
+
+  @media @tablet {
+    margin: 0;
+    padding-top: 43px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media @desktop {
+    padding-top: 56px;
+    padding-right: 652px;
+  }
+}
+
+.story__block {
+  @media @desktop {
+    padding-top: 70px;
+    padding-bottom: 72px;
+    background-color: @color-background-base;
+  }
+}
+
+.story__info {
+  @media @tablet {
+    margin-bottom: 69px;
+  }
+
+  @media @desktop {
+    box-sizing: border-box;
+    min-height: 320px;
+    margin: 0;
+    padding-right: 762px;
+    background-color: @color-background-base;
+  }
+}
+
+.story__text {
+  margin: 0 0 23px;
+  padding-right: 5px;
+
+  @media @tablet {
+    margin: 0 0 54px;
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media @desktop {
+    margin-bottom: 69px;
+  }
+}
+
+.story__digits {
+  margin: 0 0 27px;
+
+  @media @tablet {
+    margin: 0;
+  }
 }

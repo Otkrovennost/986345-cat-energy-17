@@ -1,0 +1,27 @@
+.map {
+  min-height: 320px;
+  margin: 0;
+
+  @media @desktop {
+    min-height: 400px;
+  }
+}
+
+.map__picture {
+  display: block;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.map__placemark {
+  width: 55px;
+  height: 53px;
+  background-image: url("../img/map-pin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media @tablet {
+    width: 113px;
+    height: 106px;
+  }
+}

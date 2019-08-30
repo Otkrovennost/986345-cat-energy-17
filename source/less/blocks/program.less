@@ -1,23 +1,89 @@
 .program__wrapper {
-  padding: 29px 37px 202px 38px;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 -20px 136px -20px;
+  padding: 26px 27px 168px 28px;
   text-align: center;
   color: #ffffff;
-  background-color: #68b738;
+  background-color: @color-design-base;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 100%;
   background-size: cover;
+
+  @media @tablet {
+    margin: 0 0 45px 0;
+    padding: 34px 130px 0 87px;
+    text-align: left;
+    color: #111111;
+    background: none;
+  }
+
+  @media @desktop {
+    width: 50%;
+    margin-bottom: 52px;
+    padding: 83px 50px 0 79px;
+  }
 }
 
 .program__title {
+  margin: 0 0 25px 0;
   font-weight: inherit;
   font-size: 36px;
   line-height: 36px;
   font-family: @font-design;
+
+  @media @tablet {
+    margin-bottom: 42px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .program__text {
+  margin: 0;
   line-height: 14px;
   font-family: @font-design;
   text-transform: uppercase;
+
+  @media @tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.program__img {
+  position: absolute;
+  bottom: -137px;
+  left: 0;
+  width: 100%;
+
+  @media @tablet {
+    bottom: -630px;
+  }
+
+  @media @desktop {
+    bottom: -242px;
+    left: calc(100% - 160px);
+  }
+}
+
+.program__link {
+  display: block;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media @tablet {
+    position: relative;
+    width: 245px;
+    margin-left: 88px;
+    padding: 17px 15px 17px 11px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media @desktop {
+    margin-left: 80px;
+  }
 }

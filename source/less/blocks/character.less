@@ -1,3 +1,44 @@
 .character {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   line-height: 14px;
+
+  @media @tablet {
+    justify-content: flex-start;
+    width: 250px;
+    margin-left: auto;
+    padding-top: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media @desktop {
+    align-items: center;
+    width: 285px;
+    margin: 0;
+  }
+}
+
+.character__key {
+  width: 150px;
+
+  @media @tablet {
+    width: 157px;
+  }
+
+  @media @desktop {
+    text-align: left;
+  }
+}
+
+.character__value {
+  width: 60px;
+  text-align: right;
+
+  @media @tablet {
+    width: 50px;
+    margin-left: auto;
+  }
 }
