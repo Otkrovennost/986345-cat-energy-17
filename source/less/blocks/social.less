@@ -8,18 +8,30 @@
   border-bottom: 1px solid @color-border;
 
   @media @tablet {
-    width: 300px;
+    justify-content: flex-start;
     padding: 0;
     border: none;
   }
 }
 
 .social__link {
-  margin: 0 22px 20px;
+  margin: 0 38px 20px 0;
   color: #666666;
 
   @media @tablet {
-    margin: 0 15px 20px;
+    margin: 0 28px 0 0;
+  }
+
+  &--vk {
+    margin-left: 22px;
+
+    @media @tablet {
+      margin-left: 48px;
+    }
+
+    @media @desktop {
+      margin-left: 133px;
+    }
   }
 
   &:focus,

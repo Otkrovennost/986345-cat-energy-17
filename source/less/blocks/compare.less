@@ -1,11 +1,5 @@
 .compare {
-  @media @desktop {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    height: 100%;
-  }
+  position: relative;
 }
 
 .compare__list {
@@ -211,6 +205,7 @@
   height: 34px;
   margin: -13px 0 0 -13px;
   background-color: #ffffff;
+  border: 2px solid #cdcdcd;
   border-radius: 50%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
@@ -221,8 +216,8 @@
 
   &::before {
     position: absolute;
-    top: 13px;
-    left: 13px;
+    top: 11px;
+    left: 11px;
     width: 8px;
     height: 8px;
     background-color: @color-design-base;

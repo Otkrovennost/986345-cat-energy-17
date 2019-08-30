@@ -1,4 +1,6 @@
 .program__wrapper {
+  @gradient: linear-gradient(to right, #65a93c calc(50% - 160px), #63a73a);
+
   position: relative;
   box-sizing: border-box;
   margin: 0 -20px 136px -20px;
@@ -6,10 +8,9 @@
   text-align: center;
   color: #ffffff;
   background-color: @color-design-base;
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg"), @gradient;
   background-repeat: no-repeat;
   background-position: 50% 100%;
-  background-size: cover;
 
   @media @tablet {
     margin: 0 0 45px 0;
@@ -76,7 +77,8 @@
 
   @media @tablet {
     position: relative;
-    width: 245px;
+    display: table;
+    min-width: 245px;
     margin-left: 88px;
     padding: 17px 15px 17px 11px;
     font-size: 20px;

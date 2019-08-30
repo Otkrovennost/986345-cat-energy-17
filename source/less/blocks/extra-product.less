@@ -3,6 +3,21 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 19px;
+  //   right: 50%;
+  //   left: 50%;
+  //   height: 3px;
+  //   margin-right: -50vw;
+  //   background-color: @color-design-base;
+
+  //   @media @tablet {
+  //     margin-left: -50vw;
+  //   }
+  // }
 }
 
 .extra-product__list {
@@ -28,14 +43,13 @@
   }
 
   @media @desktop {
-    padding: 16px 0;
+    padding: 16px 0 15px 0;
     border: none;
     border-bottom: 1px solid @color-border;
   }
 }
 
 .extra-product__heading {
-  position: relative;
   margin: 0;
   padding: 5px 0 35px 0;
   font-weight: 400;
