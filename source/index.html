@@ -42,9 +42,12 @@
         <h2 class="program__title">Функциональное питание для котов</h2>
         <p class="program__text">Занялся собой? Займись котом!</p>
         <picture class="program__img">
-          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-          <img src="img/index-can-mobile@1x.png" alt="Корм для котов Cat Energy Pro">
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@2x.webp 1x, img/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@2x.webp 1x, img/index-can-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/index-can-mobile@2x.webp 1x, img/index-can-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+          <img class="program__photo" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Корм для котов Cat Energy Pro">
         </picture>
       </div>
       <a class="program__link button" href="form.html">Подобрать программу</a>
@@ -126,16 +129,22 @@
           <ul class="compare__list page__list">
             <li class=" compare__item compare__item--before">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                <img class="compare__img" src="img/before-mobile@1x.png" alt="Фото кота до программы">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="compare__img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото кота до программы">
               </picture>
             </li>
             <li class="compare__item compare__item--after">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-                <img class="compare__img" src="img/after-mobile@1x.png" alt="Фото кота после программы">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="compare__img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото кота после программы">
               </picture>
             </li>
           </ul>

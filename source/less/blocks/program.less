@@ -7,10 +7,15 @@
   padding: 26px 27px 168px 28px;
   text-align: center;
   color: #ffffff;
-  background-color: @color-design-base;
+  background-color: #63a73a;
   background-image: url("../img/index-background-mobile@1x.jpg"), @gradient;
   background-repeat: no-repeat;
   background-position: 50% 100%;
+
+  @media @retina-dpi, @retina-dppx {
+    background-image: url("../img/index-background-mobile@2x.jpg"), @gradient;
+    background-size: 320px auto;
+  }
 
   @media @tablet {
     margin: 0 0 45px 0;
@@ -69,6 +74,20 @@
   }
 }
 
+.program__photo {
+  max-width: 280px;
+
+  @media @tablet {
+    max-width: 708px;
+    max-height: 609px;
+  }
+
+  @media @desktop {
+    max-width: 552px;
+    max-height: 499px;
+  }
+}
+
 .program__link {
   display: block;
   box-sizing: border-box;
@@ -86,6 +105,7 @@
   }
 
   @media @desktop {
+    min-width: 245px;
     margin-left: 80px;
   }
 }

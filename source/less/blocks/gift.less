@@ -10,16 +10,28 @@
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-size: cover;
 
+  @media @retina-dpi, @retina-dppx {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
   @media @tablet {
     padding: 71px 100px 70px 423px;
     text-align: left;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media @retina-dpi, @retina-dppx {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @media @desktop {
     padding: 187px 43px 43px 40px;
     text-align: center;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media @retina-dpi, @retina-dppx {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   &::before {
