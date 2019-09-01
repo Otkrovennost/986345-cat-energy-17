@@ -1,0 +1,7 @@
+.img(@base-img, @retina-img) {
+  background-image: url("../img/@{base-img}");
+
+  @media @retina {
+    background-image: url("../img/@{retina-img}");
+  }
+}
