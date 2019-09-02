@@ -175,7 +175,9 @@
 }
 
 .form__group-list--contacts .form__item:nth-child(odd) {
-  margin-right: 80px;
+  @media @desktop {
+    margin-right: 80px;
+  }
 }
 
 
@@ -275,14 +277,13 @@
     border: 1px solid #cdcdcd;
   }
 
-  // &:focus,
-  // &:active {
-  //   border-color: #444444;
+  &:focus {
+    outline: 1px solid #444444;
 
-  //   ~ .form__icon {
-  //     fill: @color-design-base;
-  //   }
-  // }
+    ~ .form__icon {
+      fill: @color-design-base;
+    }
+  }
 
   &--comment {
     resize: vertical;
