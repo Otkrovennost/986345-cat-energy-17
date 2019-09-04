@@ -1,6 +1,7 @@
 var navMain = document.querySelector(".nav");
 var navToggler = document.querySelector(".nav__toggler");
 
+navMain.classList.add("nav--closed");
 navMain.classList.remove("nav--nojs");
 
 navToggler.addEventListener("click", function () {

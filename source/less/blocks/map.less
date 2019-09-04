@@ -1,14 +1,18 @@
 .map {
-  height: 367px;
+  position: relative;
+  height: 362px;
   margin: 0;
+
+  @media @tablet {
+    height: 400px;
+  }
 
   @media @desktop {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1;
-    height: 400px;
+    height: 100%;
   }
 }
 
@@ -16,6 +20,15 @@
   display: block;
   overflow-x: hidden;
   text-align: center;
+}
+
+.map__img {
+  display: block;
+  margin: 0 auto;
+
+  @media @tablet {
+    height: 400px;
+  }
 }
 
 .map__placemark {
@@ -28,5 +41,21 @@
   @media @tablet {
     width: 113px;
     height: 106px;
+  }
+
+  &--preview {
+    position: absolute;
+    top: 46%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+
+    @media @tablet {
+      top: 50%;
+      left: 50%;
+    }
+
+    @media @desktop {
+      left: 73%;
+    }
   }
 }

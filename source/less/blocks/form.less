@@ -86,7 +86,7 @@
   }
 
   &--feedback {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 
     @media @tablet {
       margin-bottom: 41px;
@@ -164,7 +164,7 @@
   text-transform: uppercase;
 
   @media @tablet {
-    margin: 0 0 24px;
+    margin: 0 0 22px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -175,7 +175,9 @@
 }
 
 .form__group-list--contacts .form__item:nth-child(odd) {
-  margin-right: 80px;
+  @media @desktop {
+    margin-right: 80px;
+  }
 }
 
 
@@ -218,6 +220,14 @@
     margin-bottom: 78px;
   }
 
+  &--contacts {
+    width: 203px;
+  }
+
+  @media @tablet {
+    width: auto;
+  }
+
   &--addition {
     margin: 0 0 32px;
 
@@ -225,6 +235,10 @@
       margin: 0 0 59px;
     }
   }
+}
+
+.form__heading {
+  padding: 0 24px 0 18px;
 }
 
 .form__label {
@@ -262,37 +276,95 @@
   box-sizing: border-box;
   width: 100%;
   min-width: 50%;
+  height: 46px;
   padding: 13px 5px 13px 13px;
   font: inherit;
   color: @color-default;
   text-transform: inherit;
+  border: 1px solid fade(@color-border, 50);
+  box-shadow: none;
 
   @media @tablet {
+    height: 50px;
     padding-left: 21px;
   }
 
+  &:hover {
+    border-color: @color-border;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid #ff8282;
+
+    ~ .form__icon {
+      fill: #ff8282;
+    }
+  }
+
+  &:focus {
+    padding: 12px 4px 12px 12px;
+    border-width: 2px;
+    border-color: currentColor;
+
+    @media @tablet {
+      padding-left: 20px;
+    }
+
+    ~ .form__icon {
+      fill: @color-design-base;
+    }
+  }
+
   &--comment {
+    height: auto;
+    padding: 14px 5px 11px 13px;
     resize: vertical;
 
     @media @tablet {
-      padding: 13px 5px 16px 13px;
-      padding-left: 18px;
+      height: auto;
+      padding: 13px 5px 17px 18px;
+    }
+
+    &:focus {
+      padding: 13px 4px 10px 12px;
+
+      @media @tablet {
+        padding: 12px 4px 16px 17px;
+      }
     }
   }
 
   &--email {
+    padding-right: 45px;
     padding-left: 10px;
 
     @media @tablet {
       padding-left: 25px;
     }
+
+    &:focus {
+      padding-left: 9px;
+
+      @media @tablet {
+        padding-left: 24px;
+      }
+    }
   }
 
   &--phone {
+    padding-right: 45px;
     padding-left: 10px;
 
     @media @tablet {
       padding-left: 18px;
+    }
+
+    &:focus {
+      padding-left: 9px;
+
+      @media @tablet {
+        padding-left: 17px;
+      }
     }
   }
 }
@@ -394,7 +466,7 @@
   box-sizing: border-box;
   width: 30px;
   height: 30px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @color-border;
   border-radius: 3px;
 
   @media @tablet {

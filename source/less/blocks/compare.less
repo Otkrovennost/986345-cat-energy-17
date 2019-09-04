@@ -99,7 +99,7 @@
       width: 41px;
       height: 12px;
       background-color: #ffffff;
-      border: 1px solid #cdcdcd;
+      border: 1px solid @color-border;
       cursor: pointer;
     }
 
@@ -194,6 +194,25 @@
   height: 4px;
   margin: 0;
   opacity: 0;
+
+  @media @tablet {
+    top: -15px;
+    z-index: 1;
+    height: 34px;
+  }
+
+  &:focus,
+  &:hover {
+    ~ .compare__pin {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &:active {
+    ~ .compare__pin {
+      border: 2px solid @color-design-base;
+    }
+  }
 }
 
 .compare__pin {
@@ -205,10 +224,9 @@
   height: 34px;
   margin: -13px 0 0 -13px;
   background-color: #ffffff;
-  border: 2px solid #cdcdcd;
+  border: 2px solid @color-border;
   border-radius: 50%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-  cursor: pointer;
 
   @media @tablet {
     content: "";
@@ -237,26 +255,42 @@
   }
 }
 
-.compare__checker--after:checked ~ .compare__list .compare__item--after {
-  width: 100%;
+.compare--js .compare__img--after {
+  @media @tablet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 650px;
+    max-width: none;
+  }
 }
 
-.compare__checker--after:checked ~ .compare__list .compare__item--before {
-  width: 0;
+.compare__checker--before:checked ~ .compare__bar {
+  .compare__pin {
+    left: 0;
+  }
 }
 
-.compare__checker--after:checked ~ .compare__bar .compare__label--after::after {
-  content: "";
+.compare__checker--after:checked ~ .compare__list {
+  .compare__item--after {
+    width: 100%;
+  }
+
+  .compare__item--before {
+    width: 0;
+  }
 }
 
-.compare__checker--after:checked ~ .compare__bar .compare__label--before::after {
-  content: none;
-}
+.compare__checker--after:checked ~ .compare__bar {
+  .compare__label--after::after {
+    content: "";
+  }
 
-.compare__checker--before:checked ~ .compare__bar .compare__pin {
-  left: 0;
-}
+  .compare__label--before::after {
+    content: none;
+  }
 
-.compare__checker--after:checked ~ .compare__bar .compare__pin {
-  left: 100%;
+  .compare__pin {
+    left: 100%;
+  }
 }
