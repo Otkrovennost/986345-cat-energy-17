@@ -6,15 +6,15 @@
   <title>Кэт энерджи: подбор программы</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link real="preload" href="fonts/oswaldmedium.woff2" as="fonts" crossorigin="anonymous">
-  <link real="preload" href="fonts/oswalregular.woff2" as="fonts" crossorigin="anonymous">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswalregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page page--form">
   <h1 class="visually-hidden">Кэт энерджи</h1>
   <header class="header header--inner">
-    <nav class="header__nav nav nav--closed nav-nojs container">
+    <nav class="header__nav nav nav-nojs container">
       <a class="header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
@@ -79,9 +79,9 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__group form__group--contacts">
-        <legend class="form__title page__subtitle page__subtitle--contacts">
-          <span>Контактные данные (владельца кота)</span>
+      <fieldset class="form__group form__group--contacts page__block">
+        <legend class="form__title">
+          <span class="form__heading page__text">Контактные данные (владельца кота)</span>
         </legend>
         <ul class="form__group-list form__group-list--contacts page__list">
           <li class="form__item form__item--email">
@@ -100,18 +100,18 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__group form__group--feedback">
-        <legend class="form__title page__subtitle">
-          <span>Комментарий</span>
+      <fieldset class="form__group form__group--feedback page__block">
+        <legend class="form__title">
+          <span class="form__heading page__text">Комментарий</span>
         </legend>
         <p class="form__item form__item--feedback">
           <label class="form__labe visually-hidden" for="comment">Комментарий</label>
           <textarea class="form__field form__field--comment" id="comment" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
         </p>
       </fieldset>
-      <fieldset class="form__group form__group--checks">
-        <legend class="form__title form__title--addition page__subtitle">
-          <span>Дополнительно</span>
+      <fieldset class="form__group form__group--checks page__block">
+        <legend class="form__title form__title--addition">
+          <span class="form__heading page__text">Дополнительно</span>
         </legend>
         <ul class="form__group-list form__group-list--addition page__list">
           <li class="form__item-checks">
@@ -160,10 +160,14 @@
       </div>
       <div class="footer__map map" id="map">
         <picture class="map__picture">
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-          <img class="map__img" src="img/bg-map-mobile@1x.png" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         </picture>
+        <div class="map__placemark map__placemark--preview"></div>
       </div>
     </section>
     <div class="footer__bottom container">

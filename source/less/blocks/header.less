@@ -22,7 +22,9 @@
       background-position: bottom right;
       background-size: 50% 100%;
 
-      .img("index-background-desktop@1x.jpg", "index-background-desktop@2x.jpg");
+      @media @retina {
+        background-image: url("../img/index-background-desktop@2x.jpg"), @gradient;
+      }
     }
 
     @media @desktop-plus {

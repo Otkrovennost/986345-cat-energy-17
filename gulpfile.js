@@ -67,6 +67,7 @@ gulp.task("js", function () {
     "node_modules/svg4everybody/dist/svg4everybody.min.js",
     "source/js/start.js",
     "source/js/nav.js",
+    "source/js/story.js",
     "source/js/map.js"
   ], { sourcemaps: isDev })
     .pipe(concat("script.js"))

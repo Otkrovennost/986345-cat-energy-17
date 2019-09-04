@@ -1,5 +1,5 @@
 .program__wrapper {
-  @gradient: linear-gradient(to right, #65a93c calc(50% - 160px), #63a73a);
+  @gradient: linear-gradient(to right, #65a93c calc(50% - 160px), #63a73a calc(50% + 160px));
 
   position: relative;
   box-sizing: border-box;
@@ -7,14 +7,14 @@
   padding: 26px 27px 168px 28px;
   text-align: center;
   color: #ffffff;
-  background-color: #63a73a;
+  background-color: #63a93c;
   background-image: url("../img/index-background-mobile@1x.jpg"), @gradient;
   background-repeat: no-repeat;
   background-position: 50% 100%;
 
   @media @retina {
     background-image: url("../img/index-background-mobile@2x.jpg"), @gradient;
-    background-size: 320px auto;
+    background-size: 320px 100%;
   }
 
   @media @tablet {
@@ -99,7 +99,7 @@
     display: table;
     min-width: 245px;
     margin-left: 88px;
-    padding: 17px 15px 17px 11px;
+    padding: 17px 23px 17px 23px;
     font-size: 20px;
     line-height: 20px;
   }
